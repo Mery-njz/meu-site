@@ -1,0 +1,92 @@
+body{
+   /*cor de fundo e fonte*/
+}
+
+div{
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    flex-direction: column ;
+    border-radius: 8px;
+}
+
+.cadd img{
+    width: 800vh ;
+}
+p {
+
+  font-family: 'Lobster', cursive;
+
+  font-size: 25px;
+}
+
+h1{
+  width: 100vh ;
+}
+
+h2{
+  width: 200vh ;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #ffc0eb;
+  color: rgb(20, 8, 8);
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffc6e1;
+}
+
+
+
+.card img {
+  text-align: center;
+}
+
+
+
+
+
+.galeria {
+  display: flex;              /* coloca em linha */
+  justify-content: center;    /* centraliza horizontalmente */
+  gap: 15px;                  /* espaço entre as imagens */
+}
+
+.galeria img {
+  width: 150px;               /* define tamanho fixo */
+  height: auto;               /* mantém proporção */
+  border-radius: 8px;         /* bordas arredondadas */
+  cursor: pointer;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 4 colunas */
+  gap: 15px;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+}
+
+.galeria img:hover {
+  transform: scale(1.05); /* efeito de zoom ao passar o mouse */
+}
+
+
+
+
+
+
+
+
+
