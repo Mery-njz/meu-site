@@ -53,17 +53,46 @@ h2{
 
 
 
-.home {
+
+
+
+.collage {
+  position: relative;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 4rem;
+  color: red;
+  font-family: 'Brush Script MT', cursive;
+}
+
+.imagens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.imagens img {
+  width: 200px;
+  filter: grayscale(100%); /* preto e branco */
+  transition: all 0.4s ease;
+  box-shadow: 0px 8px 15px rgba(255,255,255,0.2);
+  border-radius: 8px;
   position: relative;
 }
 
-.home img {
-  position: relative; /* necessário para top/left funcionarem */
-}
 
-.home img:nth-child(1) { top: 50px; left: 60px; }
-.home img:nth-child(2) { top: 15px; left: -35px; }
-.home img:nth-child(3) { top: -5px; left: 12px; }
+
+
+
+
+
+
+
+
 
 
 
