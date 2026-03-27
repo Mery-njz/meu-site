@@ -61,7 +61,7 @@ h2{
   position: relative; /* necessário para top/left funcionarem */
 }
 
-.home img:nth-child(1) { top: -10px; left: 5px; }
+.home img:nth-child(1) { top: 50px; left: 5px; }
 .home img:nth-child(2) { top: 15px; left: -8px; }
 .home img:nth-child(3) { top: -5px; left: 12px; }
 
