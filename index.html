@@ -67,6 +67,17 @@
     form {
         text-align: center;
     }
+
+img {
+  filter: grayscale(100%);   /* deixa a imagem em preto e branco */
+  transition: filter 0.5s ease; /* suaviza a transição */
+}
+
+img:hover {
+  filter: grayscale(0%);     /* volta para as cores originais */
+}
+
+    
 </style>
 
 </body>
