@@ -63,22 +63,21 @@ h2{
 }
 
 .track {
-  display: inline-block;  /* mantém tudo em linha */
-  white-space: nowrap;    /* impede quebra de linha */
+  display: flex;          /* imagens lado a lado */
   animation: scroll 20s linear infinite;
 }
 
 .track img {
   width: 200px;
-  height: auto;
-  display: inline-block;  /* garante horizontal */
+  flex-shrink: 0;         /* impede que encolham */
 }
 
 /* animação: move toda a faixa para a esquerda */
 @keyframes scroll {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-800px); }
 }
+
 
 
 
