@@ -57,22 +57,26 @@ h2{
 
 
 .home {
-  display: flex;
   overflow: hidden;       /* esconde o que sai da área */
   width: 600px;           /* largura visível */
+  border: 2px solid #fff;
 }
 
-.home img {
-  width: 600px;           /* cada imagem ocupa toda a largura */
-  animation: slide 9s infinite; /* animação contínua */
+.track {
+  display: flex;
+  width: calc(200px * 8); /* largura total = nº de imagens × largura */
+  animation: scroll 20s linear infinite;
+}
+
+.track img {
+  width: 200px;
+  height: auto;
 }
 
 /* animação: move as imagens para a esquerda */
-@keyframes slide {
+@keyframes scroll {
   0%   { transform: translateX(0); }
-  33%  { transform: translateX(-100%); }
-  66%  { transform: translateX(-200%); }
-  100% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 
