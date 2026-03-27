@@ -53,38 +53,18 @@ h2{
 
 
 
-
-.galeria {
-  display: flex;              /* coloca em linha */
-  justify-content: center;    /* centraliza horizontalmente */
-  gap: 15px;                  /* espaço entre as imagens */
+.home {
+  position: relative;
 }
 
-.galeria img {
-  width: 150px;               /* define tamanho fixo */
-  height: auto;              
-  border-radius: 8px;         
-  cursor: pointer;
+.home img {
+  position: relative; /* necessário para top/left funcionarem */
 }
 
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 4 colunas */
-  gap: 15px;
-}
+.home img:nth-child(1) { top: -10px; left: 5px; }
+.home img:nth-child(2) { top: 15px; left: -8px; }
+.home img:nth-child(3) { top: -5px; left: 12px; }
 
-.galeria img {
-  width: 100%;
-  height: auto;
-}
-
-.galeria img:hover {
-  transform: scale(1.05); /* efeito de zoom ao passar o mouse */
-}
-
-    .music img:hover {
-  transform: scale(1.05); /* efeito de zoom ao passar o mouse */
-}
 
 
 .galeria img {
