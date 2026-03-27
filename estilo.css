@@ -76,6 +76,7 @@ h2{
 }
 
 .imagens img {
+  position: relative;
   width: 200px;
   filter: grayscale(100%); /* preto e branco */
   transition: all 0.4s ease;
@@ -84,7 +85,10 @@ h2{
   position: relative;
 }
 
-
+.galeria img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
 
 
 
