@@ -58,18 +58,20 @@ h2{
 
 .home {
   overflow: hidden;       /* só mostra a janela */
-  width: 600px;           /* largura visível */
+  width: 800px;           /* largura visível */
   border: 2px solid #fff;
 }
 
 .track {
-  display: flex;          /* garante que fiquem lado a lado */
+  display: inline-block;  /* mantém tudo em linha */
+  white-space: nowrap;    /* impede quebra de linha */
   animation: scroll 20s linear infinite;
 }
 
 .track img {
-  width: 200px;           /* cada imagem ocupa 200px */
-  flex-shrink: 0;         /* impede que elas encolham */
+  width: 200px;
+  height: auto;
+  display: inline-block;  /* garante horizontal */
 }
 
 /* animação: move toda a faixa para a esquerda */
@@ -77,6 +79,7 @@ h2{
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
 
 
 
