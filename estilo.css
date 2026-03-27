@@ -56,38 +56,25 @@ h2{
 
 
 
-.collage {
-  position: relative;
-  text-align: center;
-}
-
-.titulo {
-  font-size: 4rem;
-  color: red;
-  font-family: 'Brush Script MT', cursive;
-}
-
 .home {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
+  overflow: hidden;       /* esconde o que sai da área */
+  width: 600px;           /* largura visível */
 }
 
 .home img {
-  position: relative;
-  width: 200px;
-  filter: grayscale(100%); /* preto e branco */
-  transition: all 0.4s ease;
-  box-shadow: 0px 8px 15px rgba(255,255,255,0.2);
-  border-radius: 8px;
-  position: relative;
+  width: 600px;           /* cada imagem ocupa toda a largura */
+  animation: slide 9s infinite; /* animação contínua */
 }
-.galeria img:hover {
-  filter: grayscale(0%);
-  transform: scale(1.05);
+
+/* animação: move as imagens para a esquerda */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  33%  { transform: translateX(-100%); }
+  66%  { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
 }
+
 
 
 
