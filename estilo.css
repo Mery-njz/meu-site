@@ -67,7 +67,7 @@ h2{
   font-family: 'Brush Script MT', cursive;
 }
 
-.imagens {
+.home {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -75,7 +75,7 @@ h2{
   margin-top: 20px;
 }
 
-.imagens img {
+.home img {
   position: relative;
   width: 200px;
   filter: grayscale(100%); /* preto e branco */
@@ -85,13 +85,34 @@ h2{
   position: relative;
 }
 
-.galeria img:hover {
+.home img:hover {
   filter: grayscale(0%);
   transform: scale(1.05);
 }
 
 
+.home img:nth-child(1) {
+  top: -20px;
+  left: 10px;
+  transform: rotate(-5deg);
+}
 
+.home img:nth-child(2) {
+  top: 30px;
+  left: -15px;
+  transform: rotate(3deg);
+}
+
+.home img:nth-child(3) {
+  top: -10px;
+  left: 20px;
+  transform: rotate(-2deg);
+}
+
+.galeria img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
 
 
 
