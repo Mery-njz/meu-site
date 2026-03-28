@@ -56,20 +56,23 @@ h2{
 
 
 
-.home{
+.home {
   overflow: hidden;       /* só mostra a janela */
   width: 800px;           /* largura visível */
   border: 2px solid #fff;
 }
 
 .track {
-  display: flex;          /* imagens lado a lado */
+  display: flex;          /* garante que fiquem lado a lado */
+  flex-wrap: nowrap;      /* impede quebra de linha */
   animation: scroll 20s linear infinite;
 }
 
 .track img {
   width: 200px;
-  flex-shrink: 0;         /* impede que encolham */
+  height: auto;
+  flex-shrink: 0;         /* não deixa encolher */
+  display: block;         /* cada imagem é bloco fixo */
 }
 
 /* animação: move toda a faixa para a esquerda */
@@ -77,6 +80,7 @@ h2{
   0%   { transform: translateX(0); }
   100% { transform: translateX(-800px); }
 }
+
 
 
 
