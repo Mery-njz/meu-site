@@ -68,7 +68,7 @@ h2{
 .galeria img {
   width: 150px;               /* define tamanho fixo */
   height: auto;              
-  border-radius: 8px;         
+  border-radius: 2px;         
   cursor: pointer;
 }
 
