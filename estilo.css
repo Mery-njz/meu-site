@@ -64,7 +64,7 @@ h2{
   grid-template-columns: repeat(5, 1fr); /* 4 colunas */
   gap: 15px;
 }
-.galeria {
+.home {
   display: flex;              /* coloca em linha */
   justify-content: center;    /* centraliza horizontalmente */
   gap: 15px;                  /* espaço entre as imagens */
