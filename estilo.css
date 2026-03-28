@@ -59,7 +59,11 @@ h2{
 
 
 
-
+.track {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 4 colunas */
+  gap: 15px;
+}
 
 
 
