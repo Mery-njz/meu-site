@@ -60,14 +60,31 @@ h2{
 
 
 .galeria {
+  display: flex;              /* coloca em linha */
+  justify-content: center;    /* centraliza horizontalmente */
+  gap: 15px;                  /* espaço entre as imagens */
+}
+
+.galeria img {
+  width: 150px;               /* define tamanho fixo */
+  height: auto;              
+  border-radius: 8px;         
+  cursor: pointer;
+}
+
+.galeria {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 4 colunas */
   gap: 15px;
 }
-.galeria {
-  display: flex;              /* coloca em linha */
-  justify-content: center;    /* centraliza horizontalmente */
-  gap: 15px;                  /* espaço entre as imagens */
+
+.galeria img {
+  width: 100%;
+  height: auto;
+}
+
+.galeria img:hover {
+  transform: scale(1.05); /* efeito de zoom ao passar o mouse */
 }
 
 
