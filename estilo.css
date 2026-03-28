@@ -57,9 +57,9 @@ h2{
 
 
 .home {
-  overflow: hidden;       /* só mostra a janela */
-  width: 800px;           /* largura visível */
-  border: 2px solid #fff;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 4 colunas */
+  gap: 15px;
 }
 
 .track {
