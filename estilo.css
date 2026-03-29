@@ -106,6 +106,14 @@ img:hover {
 }
 
 
+
+
+
+
+
+
+
+
 .p1 {
   font-family: "Lucida Console", "Courier New", monospace;
 }
@@ -117,3 +125,24 @@ img:hover {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    header {
+  background-color: #f1f1f1;
+  background img: fundo.jpg;
+  background-size: imagem
+  background center;
+  text-align: center;
+  padding: 10px;
+    }
