@@ -14,14 +14,13 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      color: #f5f5f5;
     }
 
     .quadro {
-      background-color: #111; /* quadro mais claro que o fundo */
+      background-color: #fff; /* quadro branco */
       padding: 40px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(255, 128, 192, 0.4); /* sombra rosa */
+      box-shadow: 0 0 20px rgba(255, 128, 192, 0.6); /* sombra rosa */
       width: 90%;
       max-width: 1000px;
     }
@@ -32,10 +31,10 @@
       margin-bottom: 30px;
     }
 
-    /* Duas colunas */
+    /* Duas colunas dentro do quadro */
     .sobre {
       display: flex;
-      gap: 30px;
+      gap: 40px;
     }
 
     .coluna {
@@ -45,14 +44,15 @@
     .coluna img {
       width: 100%;
       border-radius: 12px;
-      margin-bottom: 15px;
-      box-shadow: 0 0 15px rgba(255, 128, 192, 0.6); /* sombra rosa nas fotos */
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(255, 128, 192, 0.7); /* sombra rosa nas fotos */
     }
 
     .coluna p {
-      margin: 10px 0;
+      margin: 15px 0;
       line-height: 1.6;
-      color: #f5f5f5;
+      color: #333; /* texto escuro dentro do quadro branco */
+      font-size: 18px;
     }
 
     .btn {
@@ -64,7 +64,7 @@
       border-radius: 20px;
       font-weight: bold;
       transition: all 0.3s ease;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .btn:hover {
@@ -72,7 +72,7 @@
       transform: scale(1.05);
     }
 
-    /* Responsivo: vira uma coluna no celular */
+    
     @media screen and (max-width:700px) {
       .sobre {
         flex-direction: column;
@@ -84,17 +84,17 @@
   <div class="quadro">
     <h1>Sobre mim</h1>
     <div class="sobre">
-      <!-- Coluna de fotos -->
+      
       <div class="coluna">
         <img src="mini eu.jpeg" alt="Minha foto">
-        <img src="njz.jpg" alt="Livro favorito">
-        <img src="raposo.jpg" alt="Música que amo">
+        <img src="livro.jpg" alt="Livro favorito">
+        <img src="musica.jpg" alt="Música que amo">
       </div>
 
-      <!-- Coluna de texto -->
+      
       <div class="coluna">
-        <p>Oi, eu sou a Mery ♡</p>
-        <p>Sou apaixonada por livros, mangás.</p>
+        <p>Oi, eu sou a Melody ♡</p>
+        <p>Sou apaixonada por livros, mangás e manhwas.</p>
         <p>Adoro músicas e filmes que me fazem sonhar e sentir.</p>
         <p>Este espaço é meu cantinho para guardar tudo o que amo ✨</p>
       </div>
@@ -103,4 +103,5 @@
   </div>
 </body>
 </html>
+
 
