@@ -90,3 +90,89 @@ header {
   text-align: center;
   padding: 10px;
 }
+
+
+
+
+
+
+
+
+/* Fundo e fonte geral */
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Cabeçalho com imagem de fundo */
+header {
+  background-image: url("cabeça.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Textos */
+p {
+  font-family: 'Lobster', cursive;
+  font-size: 25px;
+}
+
+h1, h2 {
+  width: 100%;
+}
+
+/* Botão */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #ffc0eb;
+  color: rgb(20, 8, 8);
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffc6e1;
+}
+
+/* Card */
+.card img {
+  display: block;
+  margin: auto;
+}
+
+/* Galeria */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: transform 0.3s ease, filter 0.5s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+/* Texto especial */
+.p1 {
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: pink;
+  font-size: 25px;
+}
