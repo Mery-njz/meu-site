@@ -3,27 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <title>Filmes - Mery</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="icon.jpg">
-</head>
-<style>
+
+  <!-- CSS direto no HTML -->
+  <style>
     body {
+      background-color: #000; /* fundo preto */
+      font-family: 'Lobster', cursive;
+      color: #f5f5f5;
       display: flex;
-      justify-content: center;   
-      align-items: center;       
-      min-height: 100vh;        
-      background-color: rgb(248, 221, 231); 
-     font-family: 'Lobster', cursive;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
     }
 
     .quadro {
-      background-color: white;   /* quadro branco */
+      background-color: #fff;
       padding: 40px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      width: 600px;            
-      text-align: center;        
+      border-radius: 12px;
+      width: 90%;
+      max-width: 900px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(255, 192, 235, 0.4);
     }
-   .btn {
+
+    h1 {
+      color: pink;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    /* Galeria de filmes */
+    .card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      filter: grayscale(100%);
+      transition: transform 0.3s ease, filter 0.5s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+      box-shadow: 0 0 10px rgba(255, 128, 192, 0.6);
+    }
+
+    /* Botão */
+    .btn {
       display: inline-block;
       padding: 10px 20px;
       background-color: #ffc0eb;
@@ -42,61 +80,35 @@
 </head>
 <body>
   <div class="quadro">
-    <h1> Meus filmes favoritos</h1>
-    <p>   ˚˖𓍢ִ໋❀   </p>
+    <h1>Meus filmes favoritos</h1>
+    <p>˚˖𓍢ִ໋❀</p>
+    <p>Tenho uma paixão imensa por cada detalhe desses filmes...</p>
+
     <div class="card">
-    <p>Meus filmes favoritas ; </p>
-    <p> tenho uma paixão imensa por cada detalhe desses filmes..</p>
+      <img src="raposo.jpg" alt="Raposo">
+      <img src="coraline.jpg" alt="Coraline">
+      <img src="mononoke.jpg" alt="Princesa Mononoke">
+      <img src="castelo.jpg" alt="Castelo Animado">
+      <img src="blue.jpg" alt="Blue">
+      <img src="kamikaze.jpg" alt="Kamikaze">
+      <img src="chiriro.jpg" alt="A Viagem de Chihiro">
+      <img src="garotas.jpg" alt="Garotas">
+      <img src="as patricinhas.jpg" alt="As Patricinhas de Beverly Hills">
+      <img src="legalmente loira.jpg" alt="Legalmente Loira">
+      <img src="500.jpg" alt="500 Dias com Ela">
+      <img src="ate as cores acabarem.jpg" alt="Até as Cores Acabarem">
+      <img src="os ultimos 10 anos.jpg" alt="Os Últimos 10 Anos">
+      <img src="O Protetor.jpg" alt="O Protetor">
+      <img src="O Protetor 2.jpg" alt="O Protetor 2">
+      <img src="matilda.jpg" alt="Matilda">
+      <img src="lorax.jpg" alt="Lorax">
+      <img src="chocolate.jpg" alt="Chocolate">
+      <img src="mulan.jpg" alt="Mulan">
+    </div>
 
-    <img src="raposo.jpg" alt="Imagem escolhida" width="100" >
-    <img src="coraline.jpg" alt="Imagem escolhida" width="100">
-    <img src="mononoke.jpg" alt="Imagem escolhida" width="100">
-    <img src="castelo.jpg" alt="Imagem escolhida" width="100">
-    <img src="blue.jpg" alt="Imagem escolhida" width="100">
-    <img src="kamikaze.jpg" alt="Imagem escolhida" width="100">
-    <img src="chiriro.jpg" alt="Imagem escolhida" width="100">
-    <img src="garotas.jpg" alt="Imagem escolhida" width="100">
-    <img src="as patricinhas.jpg" alt="Imagem escolhida" width="100">
-    <img src="legalmente loira.jpg" alt="Imagem escolhida" width="100">
-    <img src="500.jpg" alt="Imagem escolhida" width="100">
-    <img src="ate as cores acabarem.jpg" alt="Imagem escolhida" width="100">
-    <img src="os ultimos 10 anos.jpg" alt="Imagem escolhida" width="100">
-    <img src="O Protetor.jpg" alt="Imagem escolhida" width="100">
-    <img src="O Protetor 2.jpg" alt="Imagem escolhida" width="100">
-    <img src="matilda.jpg" alt="Imagem escolhida" width="100">
-    <img src="lorax.jpg" alt="Imagem escolhida" width="100">
-    <img src="chocolate.jpg" alt="Imagem escolhida" width="100">
-    <img src="mulan.jpg" alt="Imagem escolhida" width="100">
-    
-
-    <p>em andamento...</p>
-
+    <p>Em andamento...</p>
     <a href="index.html" class="btn">Voltar para Home</a>
   </div>
-  </div>
-</body>
-<body>
-  <style>
-     body {
-        background-color: rgb(0, 0, 0);
-     }
-     p {
-  text-align: center;
-}
-h2 {
-  text-align: center;
-}
-img {
-  filter: grayscale(100%);   /* deixa a imagem em preto e branco */
-  transition: filter 0.5s ease; /* suaviza a transição */
-}
-
-img:hover {
-  filter: grayscale(0%);     /* volta para as cores originais */
-}
-
-
-
-</style>
 </body>
 </html>
+
