@@ -7,7 +7,7 @@
 
   <style>
     body {
-      background-color: rgb(0, 0, 0); 
+      background-color: rgb(248, 221, 231);
       font-family: 'Lobster', cursive;
       margin: 0;
       display: flex;
@@ -22,7 +22,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(255, 192, 235, 0.4);
       width: 90%;
-      max-width: 900px;
+      max-width: 1000px;
     }
 
     h1 {
@@ -31,32 +31,25 @@
       margin-bottom: 20px;
     }
 
-    /* Flex container */
-    .flex-container {
-      display: flex;
-      flex-direction: row; /* horizontal */
-      justify-content: space-around;
-      align-items: center;
-      gap: 20px;
+    /* Layout em duas colunas */
+    .sobre {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* duas colunas iguais */
+      gap: 30px;
+      align-items: start;
     }
 
-    .flex-container > div {
-      flex: 1;
-      text-align: center;
-    }
-
-    .flex-container img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%; /* foto redonda */
+    .sobre img {
+      width: 100%;
+      border-radius: 12px;
       box-shadow: 0 0 15px rgba(255, 128, 192, 0.7); /* sombra rosa */
       margin-bottom: 15px;
     }
 
-    p {
+    .texto p {
       color: #333;
       margin: 10px 0;
+      line-height: 1.6;
     }
 
     .btn {
@@ -76,10 +69,10 @@
       transform: scale(1.05);
     }
 
-    /* Responsivo: vira coluna no celular */
+    /* Responsivo: vira uma coluna no celular */
     @media screen and (max-width:600px) {
-      .flex-container {
-        flex-direction: column;
+      .sobre {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -87,13 +80,18 @@
 <body>
   <div class="quadro">
     <h1>Sobre mim</h1>
-    <div class="flex-container">
+    <div class="sobre">
+      <!-- Coluna de fotos -->
       <div>
-        <img src="mini eu.jpeg" alt="njz">
-        <p>Oi, eu sou a Mery ♡</p>
+        <img src="mini eu.jpeg" alt="Minha foto">
+        <img src="njz.jpg" alt="Livro que gosto">
+        <img src="raposo.jpg" alt="Música favorita">
       </div>
-      <div>
-        <p>Sou apaixonada por livros, mangás e manhwas.</p>
+
+      <!-- Coluna de texto -->
+      <div class="texto">
+        <p>Oi, eu sou a Mery ♡</p>
+        <p>Sou apaixonada por livros, mangás.</p>
         <p>Adoro músicas e filmes que me fazem sonhar e sentir.</p>
         <p>Este espaço é meu cantinho para guardar tudo o que amo ✨</p>
       </div>
@@ -102,6 +100,7 @@
   </div>
 </body>
 </html>
+
 
 
 
