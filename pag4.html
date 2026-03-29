@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Sobre mim - Mery</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="icon.jpg">
-</head>
-<style>
+
+  <style>
     body {
       display: flex;
       justify-content: center;   /* centraliza horizontal */
       align-items: center;       /* centraliza vertical */
       min-height: 100vh;         /* ocupa toda a altura da tela */
       background-color: rgb(248, 221, 231); /* fundo rosa */
-     font-family: 'Lobster', cursive;
+      font-family: 'Lobster', cursive;
+      margin: 0;
     }
 
     .quadro {
@@ -22,8 +22,29 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       width: 600px;              /* largura do quadro */
       text-align: center;        /* texto centralizado */
+      border-radius: 12px;
     }
-   .btn {
+
+    h1 {
+      color: pink;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .card img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(255, 192, 235, 0.5);
+      margin-bottom: 20px;
+    }
+
+    .btn {
       display: inline-block;
       padding: 10px 20px;
       background-color: #ffc0eb;
@@ -42,34 +63,19 @@
 </head>
 <body>
   <div class="quadro">
-    <h1> Sobre mim</h1>
-    <p>   ˚˖𓍢ִ໋❀   </p>
-    <div class="card">
-    
-    <img src="new jeans.jpg" alt="Imagem escolhida" width="500">
+    <h1>Sobre mim</h1>
+    <p>˚˖𓍢ִ໋❀</p>
 
-    <p>New Jeans, também conhecido como NJZ, é um girl group sul-coreano. O grupo originalmente foi composto por cinco integrantes: Minji, Hanni, Haerin, Danielle e Hyein. </p>
+    <div class="card">
+      <img src="new jeans.jpg" alt="New Jeans">
+
+      <p>New Jeans, também conhecido como NJZ, é um girl group sul-coreano. O grupo originalmente foi composto por cinco integrantes: Minji, Hanni, Haerin, Danielle e Hyein.</p>
       <p>Foi formado pela ADOR, uma subsidiária da Hybe Corporation, e pré-lançou seu single de estreia "Attention" em 22 de julho de 2022.</p>
+    </div>
 
     <a href="index.html" class="btn">Voltar para Home</a>
   </div>
-  </div>
-</body>
-<body>
-  <style>
-     body {
-        background-color: rgb(0, 0, 0);
-     }
-     p {
-  text-align: center;
-}
-h2 {
-  text-align: center;
-}
-
-
-
-</style>
 </body>
 </html>
+
 
