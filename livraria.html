@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu - Mery</title>
+  <link rel="icon" type="image/png" href="icon.jpg">
+
+  <style>
+    body {
+      background-color: #111;
+      font-family: 'Lobster', cursive;
+      color: #f5f5f5;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .menu {
+      display: flex;
+      gap: 30px; /* espaço entre os blocos */
+    }
+
+    .card {
+      background-color: #fff;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+      border-radius: 12px;
+      width: 220px;
+      box-shadow: 0 4px 12px rgba(255, 192, 235, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 128, 192, 0.6);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      color: pink;
+      margin-bottom: 10px;
+    }
+
+    .card a {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #ffc0eb;
+      color: #000;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .card a:hover {
+      background-color: #ff9fd6;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <div class="card">
+      <img src="livros.jpg" alt="Livros">
+      <h2>Livros</h2>
+      <a href="livros.html">Entrar</a>
+    </div>
+
+    <div class="card">
+      <img src="mangas.jpg" alt="Mangás">
+      <h2>Mangás</h2>
+      <a href="mangas.html">Entrar</a>
+    </div>
+
+    <div class="card">
+      <img src="manwha.jpg" alt="Manhwa">
+      <h2>Manhwa</h2>
+      <a href="manwha.html">Entrar</a>
+    </div>
+  </div>
+</body>
+</html>
