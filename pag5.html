@@ -2,29 +2,62 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Oi, posso falar? - Mery</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Filmes - Mery</title>
   <link rel="icon" type="image/png" href="icon.jpg">
-</head>
-<style>
+
+  <style>
     body {
+      background-color: #000; 
+      font-family: 'Lobster', cursive;
+      color: #f5f5f5;
       display: flex;
-      justify-content: center;    
-      align-items: center;      
-      min-height: 100vh;         /* ocupa toda a altura da tela */
-      background-color: rgb(248, 221, 231); 
-     font-family: 'Lobster', cursive;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
     }
 
     .quadro {
-      background-color: white;   /* quadro branco */
+      background-color: #fff;
       padding: 40px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      width: 600px;              
-      text-align: center;       
+      width: 90%;
+      max-width: 900px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(255, 192, 235, 0.4);
     }
 
-   .btn {
+    h1 {
+      color: pink;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    /* Galeria de filmes */
+    .card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .card img {
+      width: 100%;
+      filter: grayscale(100%);
+      transition: transform 0.3s ease, filter 0.5s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+      box-shadow: 0 0 10px rgba(255, 128, 192, 0.6);
+    }
+
+    .btn {
       display: inline-block;
       padding: 10px 20px;
       background-color: #ffc0eb;
@@ -43,34 +76,35 @@
 </head>
 <body>
   <div class="quadro">
-    <h1> em andamento... - mery</h1>
-    <p>   ˚˖𓍢ִ໋❀   </p>
-    <div class="card">
-    <p>nada ; </p>
-    <p> nada? ...</p>
-    
-    <img src="nada.jpg" alt="Imagem escolhida" width="500">
-   
-    <p>em andamento...</p>
+    <h1>Meus filmes favoritos</h1>
+    <p>˚˖𓍢ִ໋❀</p>
+    <p>Tenho uma paixão imensa por cada detalhe desses filmes...</p>
 
+    <div class="card">
+      <img src="raposo.jpg" alt="Raposo">
+      <img src="coraline.jpg" alt="Coraline">
+      <img src="mononoke.jpg" alt="Princesa Mononoke">
+      <img src="castelo.jpg" alt="Castelo Animado">
+      <img src="blue.jpg" alt="Blue">
+      <img src="kamikaze.jpg" alt="Kamikaze">
+      <img src="chiriro.jpg" alt="A Viagem de Chihiro">
+      <img src="garotas.jpg" alt="Garotas">
+      <img src="as patricinhas.jpg" alt="As Patricinhas de Beverly Hills">
+      <img src="legalmente loira.jpg" alt="Legalmente Loira">
+      <img src="500.jpg" alt="500 Dias com Ela">
+      <img src="ate as cores acabarem.jpg" alt="Até as Cores Acabarem">
+      <img src="os ultimos 10 anos.jpg" alt="Os Últimos 10 Anos">
+      <img src="O Protetor.jpg" alt="O Protetor">
+      <img src="O Protetor 2.jpg" alt="O Protetor 2">
+      <img src="matilda.jpg" alt="Matilda">
+      <img src="lorax.jpg" alt="Lorax">
+      <img src="chocolate.jpg" alt="Chocolate">
+      <img src="mulan.jpg" alt="Mulan">
+    </div>
+
+    <p>Em andamento...</p>
     <a href="index.html" class="btn">Voltar para Home</a>
   </div>
-  </div>
-</body>
-<body>
-  <style>
-     body {
-        background-color: rgb(0, 0, 0);
-     }
-     p {
-  text-align: center;
-}
-h2 {
-  text-align: center;
-}
-
-
-
-</style>
 </body>
 </html>
+
