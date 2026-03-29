@@ -1,34 +1,38 @@
-body{
-   /*cor de fundo e fonte*/
+body {
+  background-color: black;   /* cor de fundo */
+  color: white;              /* cor da fonte */
+  font-family: Arial, sans-serif;
 }
 
-div{
-    display: flex ;
-    align-items: center ;
-    justify-content: center ;
-    flex-direction: column ;
-    border-radius: 8px;
+/* Estrutura geral */
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
 }
 
-.cadd img{
-    width: 800vh ;
+/* Imagem grande */
+.cadd img {
+  width: 800px; /* corrigido de 800vh */
 }
+
+/* Textos */
 p {
-
   font-family: 'Lobster', cursive;
-
-  font-size: 25px;
+  font-size: 25px; /* corrigido de 25xp */
 }
 
-h1{
-  width: 100vh ;
+h1 {
+  width: 100%; /* melhor que 100vh */
 }
 
-h2{
-  width: 200vh ;
+h2 {
+  width: 100%; /* idem */
 }
 
-
+/* Botão */
 .btn {
   display: inline-block;
   padding: 12px 20px;
@@ -44,102 +48,45 @@ h2{
   background-color: #ffc6e1;
 }
 
-
-
+/* Card */
 .card img {
-  text-align: center;
+  display: block;
+  margin: auto;
 }
 
-
-
-
-
-
-
-
-
-
-.galeria {
-  display: flex;              /* coloca em linha */
-  justify-content: center;    /* centraliza horizontalmente */
-  gap: 15px;                  /* espaço entre as imagens */
-}
-
-.galeria img {
-  width: 150px;               /* define tamanho fixo */
-  height: auto;              
-  border-radius: 2px;         
-  cursor: pointer;
-}
-
+/* Galeria */
 .galeria {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 4 colunas */
+  grid-template-columns: repeat(5, 1fr); /* 5 colunas */
   gap: 15px;
 }
 
 .galeria img {
   width: 100%;
   height: auto;
+  border-radius: 2px;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: transform 0.3s ease, filter 0.5s ease;
 }
 
 .galeria img:hover {
-  transform: scale(1.05); /* efeito de zoom ao passar o mouse */
+  transform: scale(1.05); /* zoom */
+  filter: grayscale(0%);  /* volta para cor */
 }
 
-
-
-
-
-
-
-
-
-
-.galeria img {
-  filter: grayscale(100%);   /* deixa a imagem em preto e branco */
-  transition: filter 0.5s ease; /* suaviza a transição */
-}
-
-img:hover {
-  filter: grayscale(0%);     /* volta para as cores originais */
-}
-
-
-
-
-
-
-
-
-
-
+/* Texto especial */
 .p1 {
   font-family: "Lucida Console", "Courier New", monospace;
-}
-.p1 {
-   color: pink;
-}
-.p1 {
-   font-size: 25xp;
+  color: pink;
+  font-size: 25px;
 }
 
-
-
-
-
-
-
-
-
-
+/* Header */
 header {
-  background-image: url("cabeça.jpg"); 
-  background-size: cover;             
-  background-position: center;        
-  text-align: center;                 
+  background-image: url("cabeça.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
   padding: 10px;
 }
-
-
-
