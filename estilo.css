@@ -1,7 +1,9 @@
+/* Fundo e fonte geral */
 body {
-  background-color: black;   /* cor de fundo */
-  color: white;              /* cor da fonte */
+  background-color: black;
+  color: white;
   font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 /* Estrutura geral */
@@ -15,104 +17,7 @@ div {
 
 /* Imagem grande */
 .cadd img {
-  width: 800px; /* corrigido de 800vh */
-}
-
-/* Textos */
-p {
-  font-family: 'Lobster', cursive;
-  font-size: 25px; /* corrigido de 25xp */
-}
-
-h1 {
-  width: 100%; /* melhor que 100vh */
-}
-
-h2 {
-  width: 100%; /* idem */
-}
-
-/* Botão */
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: #ffc0eb;
-  color: rgb(20, 8, 8);
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #ffc6e1;
-}
-
-/* Card */
-.card img {
-  display: block;
-  margin: auto;
-}
-
-/* Galeria */
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 colunas */
-  gap: 15px;
-}
-
-.galeria img {
-  width: 100%;
-  height: auto;
-  border-radius: 2px;
-  cursor: pointer;
-  filter: grayscale(100%);
-  transition: transform 0.3s ease, filter 0.5s ease;
-}
-
-.galeria img:hover {
-  transform: scale(1.05); /* zoom */
-  filter: grayscale(0%);  /* volta para cor */
-}
-
-/* Texto especial */
-.p1 {
-  font-family: "Lucida Console", "Courier New", monospace;
-  color: pink;
-  font-size: 25px;
-}
-
-/* Header */
-header {
-  background-image: url("cabeça.jpg");
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  padding: 10px;
-}
-
-
-
-
-
-
-
-
-/* Fundo e fonte geral */
-body {
-  background-color: black;
-  color: white;
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
-
-/* Cabeçalho com imagem de fundo */
-header {
-  background-image: url("cabeça.jpg");
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  padding: 20px;
+  width: 800px; /* corrigido */
 }
 
 /* Textos */
@@ -122,7 +27,7 @@ p {
 }
 
 h1, h2 {
-  width: 100%;
+  width: 100%; /* melhor que vh */
 }
 
 /* Botão */
@@ -176,3 +81,13 @@ h1, h2 {
   color: pink;
   font-size: 25px;
 }
+
+/* Header com imagem de fundo */
+header {
+  background-image: url("cabeça.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 20px;
+}
+
