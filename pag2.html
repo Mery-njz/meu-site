@@ -2,28 +2,64 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Musicas - Mery</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Músicas - Mery</title>
   <link rel="icon" type="image/png" href="icon.jpg">
-</head>
-<style>
+
+  <style>
     body {
-      display: flex;
-      justify-content: center;   /* centraliza horizontal */
-      align-items: center;       /* centraliza vertical */
-      min-height: 100vh;         /* ocupa toda a altura da tela */
-      background-color: rgb(248, 221, 231); /* fundo rosa */
+      background-color: #000; 
       font-family: 'Lobster', cursive;
+      color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
     }
 
     .quadro {
-      background-color: white;   /* quadro branco */
+      background-color: #fff;
       padding: 40px;
-      box-shadow: 0 4px 12px rgb(255, 224, 242);
-      width: 600px;              /* largura do quadro */
-      text-align: center;        /* texto centralizado */
+      width: 90%;
+      max-width: 900px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(255, 192, 235, 0.4);
     }
-   .btn {
+
+    h2 {
+      color: pink;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    
+    .music {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .music img {
+      width: 100%;
+      filter: grayscale(100%);
+      transition: transform 0.3s ease, filter 0.5s ease;
+      cursor: pointer;
+    }
+
+    .music img:hover {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+      box-shadow: 0 0 10px rgba(255, 128, 192, 0.6);
+    }
+
+  
+    .btn {
       display: inline-block;
       padding: 10px 20px;
       background-color: #ffc0eb;
@@ -42,100 +78,55 @@
 </head>
 <body>
   <div class="quadro">
-    <h2>Musicas </h2>
-    <p>        𝄞⨾𓍢ִ໋        </p>
-    <p>capa de álbuns ; </p>
-    <p> A música sempre me inspira, e cada álbum carrega uma vibe cheia de emoção  ♡ ...</p>
-    <div class="music"> 
-      <a href="https://open.spotify.com/intl-pt/track/7MnT7msJZg3XBAS0OTfGrB" target="_blank">
-    <img src="Tempo Perdido.jpg" alt="Imagem escolhida" width="100" cursor:pointer;">
-        </a>
-      <a href="https://open.spotify.com/intl-pt/track/1a19jsjG2DvbN1fVJonKUU?si=f4c01b47ce494bfc" target="_blank">
-      <img src="beabadobee.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a href="https://open.spotify.com/intl-pt/track/6dWilYAxP2aJbTTt0UsatK?si=5c265db12ca14273" target="_blank">
-      <img src="laufey.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a href="https://open.spotify.com/intl-pt/track/43iIQbw5hx986dUEZbr3eN?si=31ec875d32e24589" target="_blank">
-      <img src="star.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a href="https://open.spotify.com/intl-pt/track/38tXZcL1gZRfbqfOG0VMTH?si=3d61c650f747497d" target="_blank">
-      <img src="njz.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a href="https://open.spotify.com/intl-pt/track/20tqXTp7TJRtLA8s2vpgEB?si=4431da8eb1a14219" target="_blank">
-      <img src="Strangers.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a herf="https://open.spotify.com/intl-pt/track/1GTC0DN9LGOdP0NdvoHyX7?si=541ca1b719074129" target="_blank">
-      <img src="lamp.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a herf="https://open.spotify.com/intl-pt/track/0a4MMyCrzT0En247IhqZbD?si=bec2c98ca71c46eb" target="_blank">
-      <img src="njzs.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a href="https://open.spotify.com/intl-pt/track/6S2gYweMmT6xygVh5q3QLa?si=ff320f0b5e9c4652" target="_blank">
-      <img src="bts.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a herf="https://open.spotify.com/intl-pt/track/6TBJkXHPhu3EsMk1bshwuI?si=d464ff88e1e34fad" target="_blank">
-      <img src="only.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a href="https://open.spotify.com/intl-pt/track/3TPvrMAd1hbPRXuHCRX0Pl?si=f0703fe5208c40f2" target="_blank">
-      <img src="AEAO.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a href="https://open.spotify.com/intl-pt/album/7sGYAV0xv7ZfAMzIpMl8m1?si=9fef62a6a305430d" target="_blank">
-      <img src="boa.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a herf="https://open.spotify.com/intl-pt/track/0rhI6gvOeCKA502RdJAbfs?si=fff6470ae2734d84" target="_blank">
-      <img src="txt.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a href="https://open.spotify.com/intl-pt/track/2Xiaplc23BureS4EDeE8xa?si=f95adbf6dba24484" target="_blank">
-      <img src="illit.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a href="https://open.spotify.com/intl-pt/track/3iBgrkexCzVuPy4O9vx7Mf?si=6153cb3c48034f7b" target="_blank">
-      <img src="glue song.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a href="https://open.spotify.com/intl-pt/track/0aVd7QiY8BstysHb62c5Fi?si=bf4e07e334bd4e8b" target="_blank">
-      <img src="love.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a herf="https://open.spotify.com/intl-pt/track/4jW4IURFIhRDqUwpMgjOAf?si=1572dea94fda4eda" target="_blank">
-      <img src="light.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a href="https://open.spotify.com/intl-pt/track/1xaTREM89RbIxkcjlpf4Uw" target="_blank">
-      <img src="smthis.jpg" alt="Imagem escolhida" width="100">
-      </a>
-      <a href="https://open.spotify.com/intl-pt/track/0InIeZW4P6VO7dUGRM4AKH" target="_blank">
-      <img src="marias.jpg" alt="Imagem escolhida" width="100">
-      </a>
-    </a>
+    <h2>Músicas</h2>
+    <p>𝄞⨾𓍢ִ໋</p>
+    <p>Capa de álbuns</p>
+    <p>A música sempre me inspira, e cada álbum carrega uma vibe cheia de emoção ♡...</p>
 
-    <p>em andamento...</p>
+    <div class="music">
+      <a href="https://open.spotify.com/track/7MnT7msJZg3XBAS0OTfGrB" target="_blank">
+        <img src="Tempo Perdido.jpg" alt="Tempo Perdido"></a>
+      <a href="https://open.spotify.com/track/1a19jsjG2DvbN1fVJonKUU" target="_blank">
+        <img src="beabadobee.jpg" alt="Beabadoobee"></a>
+      <a href="https://open.spotify.com/track/6dWilYAxP2aJbTTt0UsatK" target="_blank">
+        <img src="laufey.jpg" alt="Laufey"></a>
+      <a href="https://open.spotify.com/track/43iIQbw5hx986dUEZbr3eN" target="_blank">
+        <img src="star.jpg" alt="Star"></a>
+      <a href="https://open.spotify.com/track/38tXZcL1gZRfbqfOG0VMTH" target="_blank">
+        <img src="njz.jpg" alt="NJZ"></a>
+      <a href="https://open.spotify.com/track/20tqXTp7TJRtLA8s2vpgEB" target="_blank">
+        <img src="Strangers.jpg" alt="Strangers"></a>
+      <a href="https://open.spotify.com/track/1GTC0DN9LGOdP0NdvoHyX7" target="_blank">
+        <img src="lamp.jpg" alt="Lamp"></a>
+      <a href="https://open.spotify.com/track/0a4MMyCrzT0En247IhqZbD" target="_blank">
+        <img src="njzs.jpg" alt="NJZS"></a>
+      <a href="https://open.spotify.com/track/6S2gYweMmT6xygVh5q3QLa" target="_blank">
+        <img src="bts.jpg" alt="BTS"></a>
+      <a href="https://open.spotify.com/track/6TBJkXHPhu3EsMk1bshwuI" target="_blank">
+        <img src="only.jpg" alt="Only"></a>
+      <a href="https://open.spotify.com/track/3TPvrMAd1hbPRXuHCRX0Pl" target="_blank">
+        <img src="AEAO.jpg" alt="AEAO"></a>
+      <a href="https://open.spotify.com/album/7sGYAV0xv7ZfAMzIpMl8m1" target="_blank">
+        <img src="boa.jpg" alt="Boa"></a>
+      <a href="https://open.spotify.com/track/0rhI6gvOeCKA502RdJAbfs" target="_blank">
+        <img src="txt.jpg" alt="TXT"></a>
+      <a href="https://open.spotify.com/track/2Xiaplc23BureS4EDeE8xa" target="_blank">
+        <img src="illit.jpg" alt="Illit"></a>
+      <a href="https://open.spotify.com/track/3iBgrkexCzVuPy4O9vx7Mf" target="_blank">
+        <img src="glue song.jpg" alt="Glue Song"></a>
+      <a href="https://open.spotify.com/track/0aVd7QiY8BstysHb62c5Fi" target="_blank">
+        <img src="love.jpg" alt="Love"></a>
+      <a href="https://open.spotify.com/track/4jW4IURFIhRDqUwpMgjOAf" target="_blank">
+        <img src="light.jpg" alt="Light"></a>
+      <a href="https://open.spotify.com/track/1xaTREM89RbIxkcjlpf4Uw" target="_blank">
+        <img src="smthis.jpg" alt="SM This"></a>
+      <a href="https://open.spotify.com/track/0InIeZW4P6VO7dUGRM4AKH" target="_blank">
+        <img src="marias.jpg" alt="Marias"></a>
+    </div>
 
+    <p>Em andamento...</p>
     <a href="index.html" class="btn">Voltar para Home</a>
-      
   </div>
-  </div>
-</body>
-<body>
-  <style>
-     body {
-        background-color: rgb(0, 0, 0);
-     }
-     p {
-  text-align: center;
-}
-h2 {
-  text-align: center;
-}
-
-img {
-  filter: grayscale(100%);   /* deixa a imagem em preto e branco */
-  transition: filter 0.5s ease; /* suaviza a transição */
-}
-
-img:hover {
-  filter: grayscale(0%);     /* volta para as cores originais */
-}
-
-
-
-</style>
 </body>
 </html>
+
