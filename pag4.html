@@ -7,41 +7,56 @@
 
   <style>
     body {
-      display: flex;
-      justify-content: center;   
-      align-items: center;       
-      min-height: 100vh;         
-      background-color: rgb(0, 0, 0); 
+      background-color: rgb(248, 221, 231); /* fundo rosa */
       font-family: 'Lobster', cursive;
       margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
 
     .quadro {
-      background-color: white;   
+      background-color: #fff;
       padding: 40px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      width: 600px;              
-      text-align: center;        
       border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(255, 192, 235, 0.4);
+      width: 90%;
+      max-width: 900px;
     }
 
     h1 {
+      text-align: center;
       color: pink;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Flex container */
+    .flex-container {
+      display: flex;
+      flex-direction: row; /* horizontal */
+      justify-content: space-around;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .flex-container > div {
+      flex: 1;
+      text-align: center;
+    }
+
+    .flex-container img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%; /* foto redonda */
+      box-shadow: 0 0 15px rgba(255, 128, 192, 0.7); /* sombra rosa */
+      margin-bottom: 15px;
     }
 
     p {
-      text-align: center;
-      margin: 10px 0;
       color: #333;
-    }
-
-    .card img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(255, 192, 235, 0.5);
-      margin-bottom: 20px;
+      margin: 10px 0;
     }
 
     .btn {
@@ -53,29 +68,40 @@
       border-radius: 20px;
       font-weight: bold;
       transition: all 0.3s ease;
+      margin-top: 20px;
     }
 
     .btn:hover {
       background-color: #ff9fd6;
       transform: scale(1.05);
     }
+
+    /* Responsivo: vira coluna no celular */
+    @media screen and (max-width:600px) {
+      .flex-container {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="quadro">
     <h1>Sobre mim</h1>
-    <p>˚˖𓍢ִ໋❀</p>
-
-    <div class="card">
-      <img src="new jeans.jpg" alt="New Jeans">
-
-      <p>New Jeans, também conhecido como NJZ, é um girl group sul-coreano. O grupo originalmente foi composto por cinco integrantes: Minji, Hanni, Haerin, Danielle e Hyein.</p>
-      <p>Foi formado pela ADOR, uma subsidiária da Hybe Corporation, e pré-lançou seu single de estreia "Attention" em 22 de julho de 2022.</p>
+    <div class="flex-container">
+      <div>
+        <img src="perfil.jpg" alt="Minha foto">
+        <p>Oi, eu sou a Melody ♡</p>
+      </div>
+      <div>
+        <p>Sou apaixonada por livros, mangás e manhwas.</p>
+        <p>Adoro músicas e filmes que me fazem sonhar e sentir.</p>
+        <p>Este espaço é meu cantinho para guardar tudo o que amo ✨</p>
+      </div>
     </div>
-
     <a href="index.html" class="btn">Voltar para Home</a>
   </div>
 </body>
 </html>
+
 
 
