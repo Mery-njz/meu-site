@@ -133,16 +133,13 @@ img:hover {
 
 
 
-
-
-
-
-
-    header {
-  background-color: #f1f1f1;
-  background img: fundo.jpg;
-  background-size: imagem
-  background center;
-  text-align: center;
+header {
+  background-image: url("cabeça.jpg"); 
+  background-size: cover;             
+  background-position: center;        
+  text-align: center;                 
   padding: 10px;
-    }
+}
+
+
+
