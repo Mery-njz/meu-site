@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Galeria da Hanni</title>
+  <link rel="icon" type="image/png" href="icon.jpg">
+
+  <style>
+    body {
+      background-color: #000; /* fundo preto */
+      margin: 0;
+      padding: 40px;
+      font-family: 'Lobster', cursive;
+    }
+
+    /* Galeria em grid */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 128, 192, 0.7); /* sombra rosa */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 128, 192, 1);
+    }
+  </style>
+</head>
+<body>
+  <div class="galeria">
+    <img src="hanni1.jpg" alt="Hanni 1">
+    <img src="hanni2.jpg" alt="Hanni 2">
+    <img src="hanni3.jpg" alt="Hanni 3">
+    <img src="hanni4.jpg" alt="Hanni 4">
+    <img src="hanni5.jpg" alt="Hanni 5">
+  </div>
+</body>
+</html>
