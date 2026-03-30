@@ -72,6 +72,52 @@
       background-color: #ff9fd6;
       transform: scale(1.05);
     }
+
+
+ .filme {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 128, 192, 0.7);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .filme img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .filme:hover {
+      transform: scale(1.05);
+    }
+
+    .descricao {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.7);
+      color: pink;
+      padding: 10px;
+      font-size: 14px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .filme:hover .descricao {
+      opacity: 1;
+    }
+
+
+
+
+
+    
   </style>
 </head>
 <body>
@@ -81,7 +127,10 @@
     <p>Tenho uma paixão imensa por cada detalhe desses filmes...</p>
 
     <div class="card">
+      <div class="filme">
       <img src="raposo.jpg" alt="Raposo">
+        <div class="descricao">Um clássico cheio de emoção.</div>
+    </div>
       <img src="coraline.jpg" alt="Coraline">
       <img src="mononoke.jpg" alt="Princesa Mononoke">
       <img src="castelo.jpg" alt="Castelo Animado">
