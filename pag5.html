@@ -21,7 +21,7 @@
       background-color: #fff;
       padding: 40px;
       width: 90%;
-      max-width: 900px;
+      max-width: 1000px;
       text-align: center;
       box-shadow: 0 4px 12px rgba(255, 192, 235, 0.4);
     }
@@ -37,63 +37,30 @@
       color: #333;
     }
 
-    /* Galeria de filmes */
-
-    .card img {
+    .card {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
+      margin-top: 20px;
     }
 
-
-    .card img {
-      width: 100%;
-      filter: grayscale(100%);
-      transition: transform 0.3s ease, filter 0.5s ease;
-    }
-
-    .card img:hover {
-      transform: scale(1.05);
-      filter: grayscale(0%);
-      box-shadow: 0 0 10px rgba(255, 128, 192, 0.6);
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #ffc0eb;
-      color: #000;
-      text-decoration: none;
-      border-radius: 20px;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #ff9fd6;
-      transform: scale(1.05);
-    }
-
-
- .filme {
+    .filme {
       position: relative;
       overflow: hidden;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(255, 128, 192, 0.7);
       cursor: pointer;
-      transition: transform 0.3s ease;
     }
 
     .filme img {
       width: 100%;
-      height: 300px;
-      object-fit: cover;
+      height: auto;
       display: block;
       transition: transform 0.3s ease;
     }
 
-    .filme:hover {
-      transform: scale(1.05);
+    .filme:hover img {
+      transform: scale(1.08);
     }
 
     .descricao {
@@ -114,11 +81,22 @@
       opacity: 1;
     }
 
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ffc0eb;
+      color: #000;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
 
-
-
-
-    
+    .btn:hover {
+      background-color: #ff9fd6;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -129,36 +107,27 @@
 
     <div class="card">
       <div class="filme">
-      <img src="raposo.jpg" alt="Raposo">
+        <img src="raposo.jpg" alt="Raposo">
         <div class="descricao">Um clássico cheio de emoção.</div>
-    </div>
-      <div class="filme">
-      <img src="coraline.jpg" alt="Coraline">
- <div class="descricao">Um clássico cheio de emoção.</div>
-    </div>
-        <div class="filme">
-      <img src="mononoke.jpg" alt="Princesa Mononoke">
- <div class="descricao">Um clássico cheio de emoção.</div>
-    </div>
-          <div class="filme">
-      <img src="castelo.jpg" alt="Castelo Animado">
-             <div class="descricao">Um clássico cheio de emoção.</div>
-    </div>
-      <img src="blue.jpg" alt="Blue">
-      <img src="kamikaze.jpg" alt="Kamikaze">
-      <img src="chiriro.jpg" alt="A Viagem de Chihiro">
-      <img src="garotas.jpg" alt="Garotas">
-      <img src="as patricinhas.jpg" alt="As Patricinhas de Beverly Hills">
-      <img src="legalmente loira.jpg" alt="Legalmente Loira">
-      <img src="500.jpg" alt="500 Dias com Ela">
-      <img src="ate as cores acabarem.jpg" alt="Até as Cores Acabarem">
-      <img src="os ultimos 10 anos.jpg" alt="Os Últimos 10 Anos">
-      <img src="O Protetor.jpg" alt="O Protetor">
-      <img src="O Protetor 2.jpg" alt="O Protetor 2">
-      <img src="matilda.jpg" alt="Matilda">
-      <img src="lorax.jpg" alt="Lorax">
-      <img src="chocolate.jpg" alt="Chocolate">
-      <img src="mulan.jpg" alt="Mulan">
+      </div>
+      <div class="filme"><img src="coraline.jpg" alt="Coraline"><div class="descricao">Um mundo mágico e sombrio.</div></div>
+      <div class="filme"><img src="mononoke.jpg" alt="Princesa Mononoke"><div class="descricao">A luta entre natureza e humanidade.</div></div>
+      <div class="filme"><img src="castelo.jpg" alt="Castelo Animado"><div class="descricao">Um castelo cheio de mistérios.</div></div>
+      <div class="filme"><img src="blue.jpg" alt="Perfect Blue"><div class="descricao">Um thriller psicológico intenso.</div></div>
+      <div class="filme"><img src="kamikaze.jpg" alt="Kamikaze Girls"><div class="descricao">Uma amizade improvável e divertida.</div></div>
+      <div class="filme"><img src="chiriro.jpg" alt="A Viagem de Chihiro"><div class="descricao">Uma jornada mágica inesquecível.</div></div>
+      <div class="filme"><img src="garotas.jpg" alt="Mean Girls"><div class="descricao">Comédia sobre amizade e rivalidade.</div></div>
+      <div class="filme"><img src="as patricinhas.jpg" alt="Clueless"><div class="descricao">Moda, humor e adolescência nos anos 90.</div></div>
+      <div class="filme"><img src="legalmente loira.jpg" alt="Legalmente Loira"><div class="descricao">Elle Woods provando seu valor.</div></div>
+      <div class="filme"><img src="500.jpg" alt="500 Dias com Ela"><div class="descricao">Uma história de amor não convencional.</div></div>
+      <div class="filme"><img src="ate as cores acabarem.jpg" alt="Até as Cores Acabarem"><div class="descricao">Drama intenso e emocionante.</div></div>
+      <div class="filme"><img src="os ultimos 10 anos.jpg" alt="Os Últimos 10 Anos"><div class="descricao">Uma história de amor e despedida.</div></div>
+      <div class="filme"><img src="O Protetor.jpg" alt="O Protetor"><div class="descricao">Ação e justiça implacável.</div></div>
+      <div class="filme"><img src="O Protetor 2.jpg" alt="O Protetor 2"><div class="descricao">Continuação cheia de adrenalina.</div></div>
+      <div class="filme"><img src="matilda.jpg" alt="Matilda"><div class="descricao">Magia e inteligência em uma menina incrível.</div></div>
+      <div class="filme"><img src="lorax.jpg" alt="Lorax"><div class="descricao">Uma fábula sobre natureza e consumo.</div></div>
+      <div class="filme"><img src="chocolate.jpg" alt="Chocolate"><div class="descricao">Romance doce e encantador.</div></div>
+      <div class="filme"><img src="mulan.jpg" alt="Mulan"><div class="descricao">Coragem e honra em batalha.</div></div>
     </div>
 
     <p>Em andamento...</p>
@@ -166,4 +135,5 @@
   </div>
 </body>
 </html>
+
 
