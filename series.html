@@ -6,7 +6,7 @@
   <link rel="icon" type="image/png" href="iconn.jfif">
 
   <style>
-     body {
+    body {
       background-color: #000; 
       font-family: 'Lobster', cursive;
       color: #f5f5f5;
@@ -38,14 +38,13 @@
       color: #333;
     }
 
-  .card {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); 
-  gap: 10px; 
-  margin-top: 20px;
-  justify-items: center; 
-      
-}
+    .card {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); 
+      gap: 10px; 
+      margin-top: 20px;
+      justify-items: center; 
+    }
 
     .filme {
       position: relative;
@@ -54,14 +53,18 @@
     }
 
     .filme img {
-  width: 120px;   
-  height: 180px; 
-  object-fit: cover; 
-  border-radius: 6px;
-  filter: grayscale(100%);
-  transition: transform 0.3s ease, filter 0.5s ease;
-}
+      width: 120px;   
+      height: 180px; 
+      object-fit: cover; 
+      border-radius: 6px;
+      filter: grayscale(100%);
+      transition: transform 0.3s ease, filter 0.5s ease;
+    }
 
+    .filme img:hover {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
 
     .btn {
       display: inline-block;
@@ -88,47 +91,16 @@
     <p>Tenho uma paixão imensa por cada detalhe dessas séries...</p>
 
     <div class="card">
-      <div class="filme">
-        <img src="gilmore girls.jpg" alt="Gilmore Girls">
-       
-      </div>
-      <div class="filme">
-        
-      </div>
-      <div class="filme">
-        <img src="noite sem fim.jpg" alt="Noite Sem Fim">
-        
-      </div>
-      <div class="filme">
-        
-      <div class="filme">
-        <img src="jogo da piramide.jpg" alt="Jogo da Pirâmide">
-       
-      </div>
-      <div class="filme">
-        <img src="predio.jpg" alt="Prédio">
-        
-      </div>
-      <div class="filme">
-        <img src="alice.jpg" alt="Alice">
-       
-      </div>
-      <div class="filme">
-        <img src="all of us dead.jpg" alt="All of Us Are Dead">
-        
-      </div>
-      <div class="filme">
-        <img src="a fada forte.jpg" alt="A Fada Forte">
-        
-      </div>
-      <div class="filme">
-        <img src="2521.jpg" alt="2521">
-        
-      </div>
-      <div class="filme">
-        <img src="Business Proposal.jpg" alt="Business Proposal">
-       
-      </div>
+      <div class="filme"><img src="gilmore girls.jpg" alt="Gilmore Girls"></div>
+      <div class="filme"><img src="garota 20.jpg" alt="Garota 20"></div>
+      <div class="filme"><img src="noite sem fim.jpg" alt="Noite Sem Fim"></div>
+      <div class="filme"><img src="jogo da piramide.jpg" alt="Jogo da Pirâmide"></div>
+      <div class="filme"><img src="predio.jpg" alt="Prédio"></div>
+      <div class="filme"><img src="alice.jpg" alt="Alice"></div>
+      <div class="filme"><img src="all of us dead.jpg" alt="All of Us Are Dead"></div>
+      <div class="filme"><img src="a fada forte.jpg" alt="A Fada Forte"></div>
+      <div class="filme"><img src="2521.jpg" alt="2521"></div>
+      <div class="filme"><img src="Business Proposal.jpg" alt="Business Proposal"></div>
     </div>
 
     <p>Em andamento...</p>
@@ -136,5 +108,3 @@
   </div>
 </body>
 </html>
-
-
