@@ -1,3 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<title>Fuchi's Blog</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+  body {
+    margin: 0;
+    background: #f9f9f9 url('https://i.imgur.com/9zXQZkX.png') repeat; /* padrão bolinhas */
+    font-family: Georgia, serif;
+    color: #333;
+  }
+
+  /* Cabeçalho */
+  header {
+    background: url('https://i.imgur.com/0m7Q9rY.jpg') no-repeat center center;
+    background-size: cover;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header h1 {
+    font-family: 'Special Elite', cursive;
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+    margin: 0;
+  }
+
+  /* Container principal */
+  .container {
+    display: flex;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #dbe6d1; /* verde quadriculado */
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  /* Barra lateral esquerda */
+  .sidebar {
+    width: 200px;
+    padding-right: 20px;
+    border-right: 2px solid #c7d4b6;
+  }
+  .sidebar img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .sidebar h3 {
+    font-family: 'Special Elite', cursive;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .date-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 14px;
+  }
+  .date-list li {
+    margin-bottom: 5px;
+  }
+  .date-list li a {
+    text-decoration: none;
+    color: #a3b18a;
+    font-weight: bold;
+  }
+  .date-list li a.new {
+    color: #e07a5f;
+  }
+
+  /* Área principal do blog */
+  .main-content {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+  .main-content time {
+    display: block;
+    font-style: italic;
+    color: #999;
+    margin-bottom: 15px;
+  }
+  .main-content p {
+    line-height: 1.6;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>fuchi's blog</h1>
+</header>
+
+<div class="container">
+  <aside class="sidebar">
+    <time datetime="2026-05-01">May 1, 2026<br>4:23 pm</time>
+    <img src="https://i.imgur.com/0aXqk6v.jpg" alt="Foto Personal" />
+    <h3>Personal +</h3>
+    <ul class="date-list">
+      <li><a href="#" class="new">04/15/2026 new</a></li>
+      <li><a href="#" class="new">03/31/2026 new</a></li>
+      <li><a href="#">02/27/2026</a></li>
+      <li><a href="#">01/27/2026</a></li>
+    </ul>
+
+    <img src="https://i.imgur.com/3v6x5Q7.jpg" alt="Foto Writings" />
+    <h3>Writings +</h3>
+
+    <img src="https://i.imgur.com/7Qh9X4V.jpg" alt="Foto Media Log" />
+    <h3>Media Log +</h3>
+  </aside>
+
+  <section class="main-content">
+    <time datetime="2026-04-15">April 15, 2026</time>
+    <p>
+      hii. today i decided that i'm skipping class...oops. it's actually in the morning. usually i write my blog posts at night. i made a new microblog layout! i've been into minimalism lately. tomodachi life releases tomorrow! i'm so excited. i will blog about it in my media log page mwahaha.
+    </p>
+    <p>
+      the week before last week we did our beach shoot! if you've been reading my blogs you know i'm acting in my friends short film. it was so fun! ...
+    </p>
+    <!-- Continue o texto do blog -->
+  </section>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">
