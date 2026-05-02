@@ -1,64 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Músicas - Mery</title>
-  <link rel="icon" type="image/png" href="iconn.jfif">
-
+  <link rel="icon" type="image/png" href="iconn.jfif" />
   <style>
     body {
-      background-color: #000; 
-      font-family: 'Lobster', cursive;
-      color: #f5f5f5;
+      background-color: #f0f0e8;
+      font-family: Georgia, serif;
+      color: #333;
+      margin: 20px;
       display: flex;
       justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
     }
-
-    .quadro {
-      background-color: #fff;
-      padding: 40px;
-      width: 90%;
+    .container {
+      display: flex;
       max-width: 900px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(255, 192, 235, 0.4);
+      width: 90%;
+      background: #f9f9f4;
+      border: 2px solid #dcdcdc;
+      border-radius: 8px;
+      padding: 15px;
+      box-sizing: border-box;
     }
-
-    h2 {
-      color: pink;
-      margin-bottom: 10px;
-    }
-
-    p {
-      text-align: center;
-      margin: 10px 0;
-      color: #333;
-    }
-
-    
-    .music {
+    /* Galeria de capas */
+    .gallery {
+      width: 60%;
+      height: 500px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 5px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 15px;
-      margin: 20px 0;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      background: white;
+      border-radius: 6px;
     }
-
-    .music img {
+    .gallery a img {
       width: 100%;
+      border-radius: 6px;
       filter: grayscale(100%);
       transition: transform 0.3s ease, filter 0.5s ease;
       cursor: pointer;
+      display: block;
     }
-
-    .music img:hover {
+    .gallery a img:hover {
       transform: scale(1.05);
       filter: grayscale(0%);
       box-shadow: 0 0 10px rgba(255, 128, 192, 0.6);
     }
-
-  
+    /* Sidebar */
+    .sidebar {
+      width: 35%;
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    /* Player simples */
+    .player {
+      border: 2px solid #bbb;
+      border-radius: 6px;
+      background: #e0e0d8;
+      padding: 10px;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+    }
+    .player audio {
+      width: 100%;
+      outline: none;
+    }
+    /* Menus */
+    .menu-section {
+      background: #e8e8d8;
+      border-radius: 15px;
+      padding: 10px 15px;
+      font-style: italic;
+      font-size: 14px;
+      color: #666;
+      user-select: none;
+    }
+    .menu-list {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+    .menu-list a {
+      display: block;
+      color: #333;
+      text-decoration: underline;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+    .menu-list a:hover {
+      color: #555;
+    }
+    /* Botão voltar */
     .btn {
       display: inline-block;
       padding: 10px 20px;
@@ -68,8 +107,9 @@
       border-radius: 20px;
       font-weight: bold;
       transition: all 0.3s ease;
+      text-align: center;
+      margin-top: 10px;
     }
-
     .btn:hover {
       background-color: #ff9fd6;
       transform: scale(1.05);
@@ -77,60 +117,104 @@
   </style>
 </head>
 <body>
-  <div class="quadro">
-    <h2>Músicas</h2>
-    <p>𝄞⨾𓍢ִ໋</p>
-    <p>Capa de álbuns</p>
-    <p>A música sempre me inspira, e cada álbum carrega uma vibe cheia de emoção ♡...</p>
-
-    <div class="music">
+  <div class="container">
+    <!-- Galeria -->
+    <div class="gallery">
       <a href="https://open.spotify.com/track/7MnT7msJZg3XBAS0OTfGrB" target="_blank">
-        <img src="Tempo Perdido.jpg" alt="Tempo Perdido"></a>
+        <img src="Tempo Perdido.jpg" alt="Tempo Perdido" />
+      </a>
       <a href="https://open.spotify.com/track/1a19jsjG2DvbN1fVJonKUU" target="_blank">
-        <img src="beabadobee.jpg" alt="Beabadoobee"></a>
+        <img src="beabadobee.jpg" alt="Beabadoobee" />
+      </a>
       <a href="https://open.spotify.com/track/6dWilYAxP2aJbTTt0UsatK" target="_blank">
-        <img src="laufey.jpg" alt="Laufey"></a>
+        <img src="laufey.jpg" alt="Laufey" />
+      </a>
       <a href="https://open.spotify.com/track/43iIQbw5hx986dUEZbr3eN" target="_blank">
-        <img src="star.jpg" alt="Star"></a>
+        <img src="star.jpg" alt="Star" />
+      </a>
       <a href="https://open.spotify.com/track/38tXZcL1gZRfbqfOG0VMTH" target="_blank">
-        <img src="njz.jpg" alt="NJZ"></a>
+        <img src="njz.jpg" alt="NJZ" />
+      </a>
       <a href="https://open.spotify.com/track/20tqXTp7TJRtLA8s2vpgEB" target="_blank">
-        <img src="Strangers.jpg" alt="Strangers"></a>
+        <img src="Strangers.jpg" alt="Strangers" />
+      </a>
       <a href="https://open.spotify.com/track/1GTC0DN9LGOdP0NdvoHyX7" target="_blank">
-        <img src="lamp.jpg" alt="Lamp"></a>
+        <img src="lamp.jpg" alt="Lamp" />
+      </a>
       <a href="https://open.spotify.com/track/0a4MMyCrzT0En247IhqZbD" target="_blank">
-        <img src="njzs.jpg" alt="NJZS"></a>
+        <img src="njzs.jpg" alt="NJZS" />
+      </a>
       <a href="https://open.spotify.com/track/6S2gYweMmT6xygVh5q3QLa" target="_blank">
-        <img src="bts.jpg" alt="BTS"></a>
+        <img src="bts.jpg" alt="BTS" />
+      </a>
       <a href="https://open.spotify.com/track/6TBJkXHPhu3EsMk1bshwuI" target="_blank">
-        <img src="only.jpg" alt="Only"></a>
+        <img src="only.jpg" alt="Only" />
+      </a>
       <a href="https://open.spotify.com/track/3TPvrMAd1hbPRXuHCRX0Pl" target="_blank">
-        <img src="AEAO.jpg" alt="AEAO"></a>
+        <img src="AEAO.jpg" alt="AEAO" />
+      </a>
       <a href="https://open.spotify.com/album/7sGYAV0xv7ZfAMzIpMl8m1" target="_blank">
-        <img src="boa.jpg" alt="Boa"></a>
+        <img src="boa.jpg" alt="Boa" />
+      </a>
       <a href="https://open.spotify.com/track/0rhI6gvOeCKA502RdJAbfs" target="_blank">
-        <img src="txt.jpg" alt="TXT"></a>
+        <img src="txt.jpg" alt="TXT" />
+      </a>
       <a href="https://open.spotify.com/track/2Xiaplc23BureS4EDeE8xa" target="_blank">
-        <img src="illit.jpg" alt="Illit"></a>
+        <img src="illit.jpg" alt="Illit" />
+      </a>
       <a href="https://open.spotify.com/track/3iBgrkexCzVuPy4O9vx7Mf" target="_blank">
-        <img src="glue song.jpg" alt="Glue Song"></a>
+        <img src="glue song.jpg" alt="Glue Song" />
+      </a>
       <a href="https://open.spotify.com/track/0aVd7QiY8BstysHb62c5Fi" target="_blank">
-        <img src="love.jpg" alt="Love"></a>
+        <img src="love.jpg" alt="Love" />
+      </a>
       <a href="https://open.spotify.com/track/4jW4IURFIhRDqUwpMgjOAf" target="_blank">
-        <img src="light.jpg" alt="Light"></a>
+        <img src="light.jpg" alt="Light" />
+      </a>
       <a href="https://open.spotify.com/track/1xaTREM89RbIxkcjlpf4Uw" target="_blank">
-        <img src="smthis.jpg" alt="SM This"></a>
+        <img src="smthis.jpg" alt="SM This" />
+      </a>
       <a href="https://open.spotify.com/track/0InIeZW4P6VO7dUGRM4AKH" target="_blank">
-        <img src="marias.jpg" alt="Marias"></a>
-      <a href="https://open.spotify.com/intl-pt/track/5yvVYFDUpbnjcnRBgjwTzM">
-      <img src="tame impala and jennie.png"></a>
-      <a href="https://open.spotify.com/intl-pt/track/5hM5arv9KDbCHS0k9uqwjr>
-        <img src="bordeline.jpg">
+        <img src="marias.jpg" alt="Marias" />
+      </a>
+      <a href="https://open.spotify.com/intl-pt/track/5yvVYFDUpbnjcnRBgjwTzM" target="_blank">
+        <img src="tame impala and jennie.png" alt="Tame Impala and Jennie" />
+      </a>
+      <a href="https://open.spotify.com/intl-pt/track/5hM5arv9KDbCHS0k9uqwjr" target="_blank">
+        <img src="bordeline.jpg" alt="Bordeline" />
       </a>
     </div>
 
-    <p>Em andamento...</p>
-    <a href="index.html" class="btn">Voltar para Home</a>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="player">
+        <p><strong>Player de Música</strong></p>
+        <audio controls>
+          <source src="musica-exemplo.mp3" type="audio/mpeg" />
+          Seu navegador não suporta o elemento de áudio.
+        </audio>
+      </div>
+
+      <div>
+        <div class="menu-section">Monthly Music...</div>
+        <div class="menu-list">
+          <div>2026</div>
+          <a href="#">March 2026</a>
+          <a href="#">February 2026</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="menu-section">Favorites...</div>
+        <div class="menu-list">
+          <a href="#">Albums</a>
+          <a href="#">Artists</a>
+          <a href="#">Songs</a>
+          <a href="#">Music videos</a>
+          <a href="#">Concerts</a>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
