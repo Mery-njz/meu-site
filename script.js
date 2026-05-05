@@ -9,13 +9,11 @@ document.body.appendChild(saida);
 form.addEventListener("submit", function(event){
   event.preventDefault();
 
-  // cap
   const nome = document.getElementById("nome").value;
   const email = document.getElementById("email").value;
   const mensagem = document.getElementById("mensagem").value;
   const categoria = document.getElementById("categoria").value;
 
-  // mon
   const dados = {
     nome: nome,
     email: email,
@@ -23,7 +21,6 @@ form.addEventListener("submit", function(event){
     categoria: categoria
   };
 
-  // exi
   saida.innerHTML = `
     <p><strong>Nome:</strong> ${dados.nome}</p>
     <p><strong>Email:</strong> ${dados.email}</p>
