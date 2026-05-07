@@ -1,138 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8" />
-<title> ּ֯ . ❥ ּ֯ ┆꒰ 𝚖𝚎𝚛𝚢 𝚜𝚒𝚝𝚎 .ᐟ ꒱</title>
-<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
-<style>
-  body {
-    background-color: #f9f9f9;
-    font-family: 'Special Elite', monospace, cursive;
-    font-size: 14px;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-  }
-  .container {
-    width: 900px;
-    margin: 0 auto;
-    position: relative;
-  }
-  /* Coluna esquerda */
-  .left-column {
-    width: 200px;
-    float: left;
-    text-align: center;
-  }
-  .left-column img {
-    max-width: 100%;
-    margin-bottom: 10px;
-  }
-  .menu {
-    font-family: 'Special Elite', cursive;
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    white-space: pre-line;
-  }
-  /* Coluna central */
-  .center-column {
-    width: 480px;
-    float: left;
-    text-align: center;
-    margin: 0 20px;
-  }
-  .center-column img {
-    max-width: 100%;
-    margin-bottom: 10px;
-  }
-  .scroll-box {
-    width: 100%;
-    height: 120px;
-    overflow-y: scroll;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background: white;
-    font-family: 'Courier New', monospace;
-    font-size: 13px;
-    text-align: left;
-  }
-  /* Coluna direita */
-  .right-column {
-    width: 180px;
-    float: left;
-    text-align: center;
-  }
-  .right-column img {
-    max-width: 100%;
-    margin-bottom: 10px;
-  }
-  .calendar {
-    font-family: 'Courier New', monospace;
-    font-size: 12px;
-    background: #d9e6d9;
-    border: 1px solid #ccc;
-    padding: 5px;
-    width: 100%;
-  }
-  /* Limpar floats */
-  .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  /* Estilo dos títulos com fontes decorativas */
-  h1 {
-    font-family: 'Special Elite', cursive;
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
-  /* Estilo para balões de fala */
-  .speech-bubble {
-    position: relative;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    width: 140px;
-    font-size: 12px;
-    font-family: 'Courier New', monospace;
-    margin: 10px auto;
-  }
-  .speech-bubble::after {
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    left: 20px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent transparent #fff transparent;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> ּ֯ . ❥ ּ֯ ┆꒰ 𝚖𝚎𝚛𝚢 𝚜𝚒𝚝𝚎 .ᐟ ꒱</title>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Special Elite', monospace, cursive;
+      font-size: 14px;
+      color: #333;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* Colunas */
+    .left-column, .center-column, .right-column {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .left-column { flex: 1 1 200px; }
+      .center-column { flex: 2 1 480px; }
+      .right-column { flex: 1 1 180px; }
+    }
+
+    /* Menu */
+    .menu {
+      font-family: 'Special Elite', cursive;
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      white-space: pre-line;
+    }
+
+    /* Imagens */
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    /* Scroll box */
+    .scroll-box {
+      width: 100%;
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background: white;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      text-align: left;
+    }
+
+    /* Títulos */
+    h1 {
+      font-family: 'Special Elite', cursive;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    /* Balão de fala */
+    .speech-bubble {
+      position: relative;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      width: 80%;
+      max-width: 140px;
+      font-size: 12px;
+      font-family: 'Courier New', monospace;
+      margin: 10px auto;
+    }
+    .speech-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: 20px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent transparent #fff transparent;
+    }
+
+    /* Calendário */
+    .calendar {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      background: #d9e6d9;
+      border: 1px solid #ccc;
+      padding: 5px;
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    th, td {
+      padding: 4px;
+    }
+  </style>
 </head>
 <body>
-  <div class="container clearfix">
+  <div class="container">
+    <!-- Coluna esquerda -->
     <div class="left-column">
       <div class="menu">
-        <a href="pag2.html">
-        music<br>
-        </a>
-        <a href="pag5.html">
-        films<br>
-        </a>
+        <a href="pag2.html">music<br></a>
+        <a href="pag5.html">films<br></a>
         moodboards<br>
         serie<br>
         music<br>
-        <a href="livraria.html">
-        books<br>
-        </a>
+        <a href="livraria.html">books<br></a>
         credits
       </div>
       <img src="imagem1.jpg" alt="Imagem 1" />
       <img src="imagem2.jpg" alt="Imagem 2" />
-      <!-- Adicione mais imagens e elementos conforme necessário -->
     </div>
 
+    <!-- Coluna central -->
     <div class="center-column">
       <h1>Mery ⭑⊹ ࣪ ˖ᐟ</h1>
       <img src="imagem-central.jpg" alt="Imagem central" style="width: 300px; height: auto; object-fit: contain;" />
@@ -140,20 +140,19 @@
         hello welcome to <b>fuchi</b><br>
         this website is a collection of everything i love.<br>
         fuchi is my hobby passion project i started when i was fifteen...
-        <!-- Texto rolável -->
       </div>
       <img src="imagem-personagens.png" alt="Personagens" />
     </div>
 
+    <!-- Coluna direita -->
     <div class="right-column">
       <a href="pag4.html">
-      <img src="imagem-blog.jpg" alt="Blog" />
+        <img src="imagem-blog.jpg" alt="Blog" />
       </a>
       <div class="speech-bubble">Blog is my life . .</div>
       <img src="imagem-about.jpg" alt="About" />
       <img src="imagem-avatar.jpg" alt="Avatar" />
       <div class="calendar">
-        <!-- Calendário simples em tabela -->
         <table>
           <thead>
             <tr><th>Su</th><th>M</th><th>T</th><th>W</th><th>Th</th><th>F</th><th>Sa</th></tr>
@@ -161,7 +160,6 @@
           <tbody>
             <tr><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
             <tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
-            <!-- Continue o calendário -->
           </tbody>
         </table>
       </div>
@@ -169,4 +167,3 @@
   </div>
 </body>
 </html>
-
