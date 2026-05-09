@@ -32,7 +32,9 @@
       <a onclick="loadContent('books')">books</a> |
       <a onclick="loadContent('hirono')">hirono</a> |
       <a onclick="loadContent('k-pop')">k-pop</a> |
+      <a href="index.html>
       <a onclick="loadContent('home')">home</a>
+    </a>
     </nav>
   </header>
 
@@ -56,9 +58,12 @@
         home: `<h2>Home</h2><p>Página inicial.</p>`
       };
 
-      container.innerHTML = contents[section]
+      container.innerHTML = contents[section]'<p>Conteúdo não encontrado.</p>';
+    }
+  </script>
 
-
+</body>
+</html>
 
 
 
