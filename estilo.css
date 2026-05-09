@@ -8,11 +8,14 @@
 /* Corpo e html ocupando 100% da altura */
 html, body {
   height: 100%;
+  width: 100%;
   font-family: 'Arial', sans-serif;
-  background-image: url('mvbb.jpg'); /* substitua pelo caminho correto */
+  background-image: url('mvbb.jpg'); /* Substitua pelo caminho correto da sua imagem */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #000; /* fallback preto */
   color: white;
 }
 
@@ -29,13 +32,11 @@ html, body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
   justify-content: center; /* centraliza verticalmente */
   align-items: flex-start; /* alinha à esquerda */
   padding-left: 20px;
+  gap: 15px;
+  overflow-y: auto;
 }
 
 /* Menu da coluna esquerda */
@@ -61,16 +62,15 @@ html, body {
 /* Coluna central */
 .center-column {
   flex: 2;
-  margin-left: 40px;
-    /* background: rgba(0, 0, 0, 0.4); */
-/* fundo semitransparente para legibilidade */
+  background: transparent; /* sem fundo cinza */
   border-radius: 15px;
-  padding: 30px;
+  padding: 30px 30px 30px 60px; /* top right bottom left */
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
   text-align: center;
+  margin-left: 40px; /* desloca a coluna para a direita */
 }
 
 /* Título da coluna central */
@@ -95,6 +95,7 @@ html, body {
   font-size: 1.1em;
   line-height: 1.5em;
   margin-bottom: 20px;
+  color: white;
 }
 
 /* Imagem personagens */
@@ -159,17 +160,41 @@ html, body {
   border-radius: 4px;
 }
 
-/* Responsividade básica */
-@media (max-width: 900px) {
+/* --- Ajustes para Celulares --- */
+@media (max-width: 768px) {
+  /* 1. Faz as colunas ficarem uma embaixo da outra */
   .container {
     flex-direction: column;
-    height: auto;
+    height: auto; /* Permite que a página role */
   }
+
   .left-column, .center-column, .right-column {
     flex: none;
     width: 100%;
+    margin-left: 0 !important; /* Remove o deslocamento lateral que criamos para o desktop */
+    padding: 15px !important;
   }
+
+  /* 2. Centraliza o texto na coluna central no celular */
   .center-column {
-    padding: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* 3. Ajusta o tamanho da imagem de fundo para não ficar estranha */
+  html, body {
+    background-position: center; /* Mantém o foco no meio */
+    background-size: cover;
+  }
+  
+  /* 4. Ajuste extra: evita que imagens gigantes estourem a tela do celular */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 5. Esconde a imagem de personagens no celular para melhorar o layout */
+  .center-column > img:last-child {
+    display: none;
   }
 }
