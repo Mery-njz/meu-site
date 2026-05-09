@@ -1,75 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mery's Collection</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="home_collection.css">
+  <title>Mery's Collection - Dinâmico</title>
+  <link rel="stylesheet" href="livros.css" />
   <style>
-   ...
+    /* Adicione aqui o CSS do container e do menu para manter o estilo */
+    .frame {
+      width: 620px;
+      height: 510px;
+      background: #f8f8f6;
+      border: 1px solid #c7cec2;
+      overflow-y: auto;
+      padding: 15px;
+      margin: 20px auto;
+    }
+    nav a {
+      margin: 0 10px;
+      cursor: pointer;
+      text-decoration: underline;
+      color: #8f9b83;
+    }
   </style>
 </head>
 <body>
-  <div class="site">
-    <div class="topline"></div>
 
-    <header>
-      <div class="title-wrap">
-        <h1>Mery's Collection</h1>
-        <span class="star" aria-hidden="true">☆</span>
-      </div>
-    </header>
-
-    <nav aria-label="Categorias">
-      <a href="home_colletion.html">☆</a> |
-      <a href="beauty.html">beauty</a> |
-      <a href="#">bags</a> |
-      <a href="livros.html">books</a> |
-      <a href="#">hirono</a> |
-      <a href="#">k-pop</a> |
-      <a href="index.html">home</a>
+  <header>
+    <h1>Mery's Collection</h1>
+    <nav>
+      <a href="#" onclick="loadContent('home')">home</a>
+      <a href="#" onclick="loadContent('books')">books</a>
+      <a href="#" onclick="loadContent('beauty')">beauty</a>
     </nav>
+  </header>
 
-    <main class="content">
-      <section class="frame" aria-label="Coleção de livros e revistas">
-        <div class="section">
-          <div class="grid">
-           <img src="fuchi.jpg" alt="Fuchi">
-          </div>
-        </div>
-
-        <div class="divider">art books &amp; magazines &amp; other</div>
-
-        <div class="section">
-          <div class="small-grid">
-            <div class="mag m1" title="Magazine 1"></div>
-            <div class="mag m2" title="Magazine 2"></div>
-            <div class="mag m3" title="Magazine 3"></div>
-            <div class="mag m4" title="Magazine 4"></div>
-            <div class="mag m5" title="Magazine 5"></div>
-          </div>
-        </div>
-        <script>
-  function showContent(section) {
-    const container = document.getElementById('main-container');
-    if (section === 'home') {
-      container.innerHTML = '<p>Conteúdo da home</p>';
-    } else if (section === 'books') {
-      container.innerHTML = '<p>Conteúdo dos livros</p>';
-      // Aqui você pode colocar o HTML dos livros
-    } else if (section === 'beauty') {
-      container.innerHTML = '<p>Conteúdo de beleza</p>';
-    }
-  }
-</script>
-      </section>
-    </main>
+  <div class="frame" id="content-frame">
+    <h2>Bem-vinda!</h2>
+    <p>Selecione uma categoria acima para ver o conteúdo.</p>
   </div>
+
+  <script>
+    function loadContent(section) {
+      const container = document.getElementById('content-frame');
+      const contents = {
+        home: `<h2>Home</h2><p>Conteúdo da página inicial.</p>`,
+        books: `<h2>Books</h2>
+                <ul>
+                  <li>Amor e Gelato</li>
+                  <li>Cidade de Papel</li>
+                  <li>Fallen</li>
+                </ul>`,
+        beauty: `<h2>Beauty</h2><p>Dicas e favoritos de beleza.</p>`
+      };
+      container.innerHTML = contents[section] || '<p>Conteúdo não encontrado.</p>';
+    }
+  </script>
+
 </body>
 </html>
+
 
 
 
