@@ -56,6 +56,7 @@ html, body {
 /* Coluna central */
 .center-column {
   flex: 2;
+  margin-left: 40px;
     /* background: rgba(0, 0, 0, 0.4); */
 /* fundo semitransparente para legibilidade */
   border-radius: 15px;
