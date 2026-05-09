@@ -52,6 +52,19 @@
             <div class="mag m5" title="Magazine 5"></div>
           </div>
         </div>
+        <script>
+  function showContent(section) {
+    const container = document.getElementById('main-container');
+    if (section === 'home') {
+      container.innerHTML = '<p>Conteúdo da home</p>';
+    } else if (section === 'books') {
+      container.innerHTML = '<p>Conteúdo dos livros</p>';
+      // Aqui você pode colocar o HTML dos livros
+    } else if (section === 'beauty') {
+      container.innerHTML = '<p>Conteúdo de beleza</p>';
+    }
+  }
+</script>
       </section>
     </main>
   </div>
