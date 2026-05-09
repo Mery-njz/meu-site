@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <title>Mery's Collection - Dinâmico</title>
-  <link rel="stylesheet" href="livros.css" />
+  <meta charset="UTF-8">
+  <title>Mery's Collection</title>
+  <link rel="stylesheet" href="livros.css">
   <style>
-    /* Adicione aqui o CSS do container e do menu para manter o estilo */
+    /* Estilização básica para alinhar o menu */
+    nav { margin-top: 15px; margin-bottom: 20px; font-size: 1.1em; }
+    nav span, nav a { color: #8f9b83; text-decoration: none; margin: 0 5px; }
+    nav a { text-decoration: underline; cursor: pointer; }
+    
     .frame {
       width: 620px;
       height: 510px;
@@ -13,62 +17,46 @@
       border: 1px solid #c7cec2;
       overflow-y: auto;
       padding: 15px;
-      margin: 20px auto;
-    }
-    nav a {
-      margin: 0 10px;
-      cursor: pointer;
-      text-decoration: underline;
-      color: #8f9b83;
+      margin: 0 auto;
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <header style="text-align: center;">
     <h1>Mery's Collection</h1>
     <nav>
-      <a href="#" onclick="loadContent('home')">home</a>
-      <a href="#" onclick="loadContent('books')">books</a>
-      <a href="#" onclick="loadContent('beauty')">beauty</a>
+      <span>☆</span> |
+      <a onclick="loadContent('beauty')">beauty</a> |
+      <a onclick="loadContent('bags')">bags</a> |
+      <a onclick="loadContent('books')">books</a> |
+      <a onclick="loadContent('hirono')">hirono</a> |
+      <a onclick="loadContent('k-pop')">k-pop</a> |
+      <a onclick="loadContent('home')">home</a>
     </nav>
   </header>
 
+  <!-- O conteúdo será carregado aqui -->
   <div class="frame" id="content-frame">
     <h2>Bem-vinda!</h2>
-    <p>Selecione uma categoria acima para ver o conteúdo.</p>
+    <p>Selecione uma categoria no menu acima.</p>
   </div>
 
   <script>
     function loadContent(section) {
       const container = document.getElementById('content-frame');
+      
+      // Defina aqui o conteúdo de cada página
       const contents = {
-        home: `<h2>Home</h2><p>Conteúdo da página inicial.</p>`,
-        books: `<h2>Books</h2>
-                <ul>
-                  <li>Amor e Gelato</li>
-                  <li>Cidade de Papel</li>
-                  <li>Fallen</li>
-                </ul>`,
-        beauty: `<h2>Beauty</h2><p>Dicas e favoritos de beleza.</p>`
+        beauty: `<h2>Beauty</h2><p>Dicas de beleza.</p>`,
+        bags: `<h2>Bags</h2><p>Minhas bolsas favoritas.</p>`,
+        books: `<h2>Books</h2><ul><li>Amor e Gelato</li><li>Cidade de Papel</li><li>Fallen</li></ul>`,
+        hirono: `<h2>Hirono</h2><p>Coleção Hirono.</p>`,
+        'k-pop': `<h2>K-Pop</h2><p>Favoritos de K-Pop.</p>`,
+        home: `<h2>Home</h2><p>Página inicial.</p>`
       };
-      container.innerHTML = contents[section] || '<p>Conteúdo não encontrado.</p>';
-    }
-  </script>
 
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
+      container.innerHTML = contents[section]
 
 
 
