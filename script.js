@@ -1,31 +1,23 @@
-function alterarFundo(){
-  document.body.style.backgroundColor = "black";
-}
+const formulario = document.getElementById('meuFormulario');
+const colecao = document.getElementById('colecao');
 
-const form = document.querySelector("form");
-const saida = document.createElement("div");
-document.body.appendChild(saida);
+formulario.addEventListener('submit', function(evento) {
+    evento.preventDefault();
 
-form.addEventListener("submit", function(event){
-  event.preventDefault();
+    const novo = {
+        titulo: document.getElementById('titulo').value,
+        imagem: document.getElementById('imagem').value,
+        texto: document.getElementById('paragrafo').value
+    };
 
-  const nome = document.getElementById("nome").value;
-  const email = document.getElementById("email").value;
-  const mensagem = document.getElementById("mensagem").value;
-  const categoria = document.getElementById("categoria").value;
+    const card = `
+        <div class="card">
+            <img src="${novo.imagem}" alt="${novo.titulo}">
+            <h3>${novo.titulo}</h3>
+            <p>${novo.texto}</p>
+        </div>
+    `;
 
-  const dados = {
-    nome: nome,
-    email: email,
-    mensagem: mensagem,
-    categoria: categoria
-  };
-
-  saida.innerHTML = `
-    <p><strong>Nome:</strong> ${dados.nome}</p>
-    <p><strong>Email:</strong> ${dados.email}</p>
-    <p><strong>Mensagem:</strong> ${dados.mensagem}</p>
-    <p><strong>Categoria:</strong> ${dados.categoria}</p>
-  `;
+    colecao.innerHTML += card;
+    formulario.reset();
 });
-
