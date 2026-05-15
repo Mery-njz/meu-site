@@ -1,36 +1,32 @@
-/* Reset básico */
+/* 🔄 Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* 🌌 Corpo e fundo */
 html, body {
   height: 100%;
   width: 100%;
   font-family: 'Arial', sans-serif;
-  background-image: url('mvbb.jpg'); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: #000;
-  color: white;
+  background: #000 url('mvbb.jpg') center/cover no-repeat fixed;
+  color: #fff;
 }
 
-/* Container Principal (Onde a mágica acontece) */
+/* 🧩 Container Principal */
 .container-principal {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 40px;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding: 20px;
-  flex-wrap: wrap; /* Ajuda na responsividade */
+  flex-wrap: wrap;
 }
 
-/* O Bloco Central (Mery + Flor + Texto) */
+/* 🌸 Bloco Central */
 .centro {
   text-align: center;
   max-width: 400px;
@@ -43,29 +39,43 @@ html, body {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   font-size: 3em;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
 }
 
 .flor-lotus {
   width: 150px;
   margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
-/* O Bloco da Direita (A imagem separada) */
+.flor-lotus:hover {
+  transform: scale(1.1);
+}
+
+/* 🎞️ Bloco da Direita */
 .lado-direito img {
   max-width: 300px;
   height: auto;
   border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-/* --- Ajustes para Celulares --- */
+/* 📱 Responsividade */
 @media (max-width: 768px) {
   .container-principal {
     flex-direction: column;
-    height: auto;
     padding-top: 50px;
   }
-  
+
   .centro, .lado-direito {
     width: 100%;
+  }
+
+  .centro h1 {
+    font-size: 2.2em;
+  }
+
+  .flor-lotus {
+    width: 120px;
   }
 }
