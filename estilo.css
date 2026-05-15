@@ -5,226 +5,67 @@
   box-sizing: border-box;
 }
 
-/* Corpo e html ocupando 100% da altura */
 html, body {
   height: 100%;
   width: 100%;
   font-family: 'Arial', sans-serif;
-  background-image: url('mvbb.jpg'); /* Substitua pelo caminho correto da sua imagem */
+  background-image: url('mvbb.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: #000; /* fallback preto */
+  background-color: #000;
   color: white;
 }
 
-/* Container principal com display flex para as colunas */
-.container {
+/* Container Principal (Onde a mágica acontece) */
+.container-principal {
   display: flex;
-  height: 100vh; /* altura da tela */
-  padding: 20px;
-  gap: 20px;
-}
-
-/* Coluna esquerda */
-.left-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centraliza verticalmente */
-  align-items: flex-start; /* alinha à esquerda */
-  padding-left: 20px;
-  gap: 15px;
-  overflow-y: auto;
-}
-
-/* Menu da coluna esquerda */
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  margin-bottom: 10px;
-  display: block;
-}
-
-.menu a:hover {
-  text-decoration: underline;
-}
-
-/* Imagens na coluna esquerda */
-.left-column img {
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
   width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
+  height: 100vh;
+  padding: 20px;
+  flex-wrap: wrap; /* Ajuda na responsividade */
 }
 
-/* Coluna central */
-.center-column {
-  flex: 2;
-  background: transparent; /* sem fundo cinza */
-  border-radius: 15px;
-  padding: 30px 30px 30px 60px; /* top right bottom left */
+/* O Bloco Central (Mery + Flor + Texto) */
+.centro {
+  text-align: center;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: auto;
-  text-align: center;
-  margin-left: 40px; /* desloca a coluna para a direita */
 }
 
-/* Título da coluna central */
-.center-column h1 {
+.centro h1 {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   font-size: 3em;
   margin-bottom: 20px;
 }
 
-
-.container-principal {
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente o conjunto */
-  align-items: center; /* Alinha verticalmente ao centro */
-  gap: 40px; /* Espaço entre os dois blocos */
-  width: 100%;
-  height: 100vh; /* Altura total da tela */
-  box-sizing: border-box;
-  padding: 20px;
-}
-
-.centro {
-  text-align: center;
-  max-width: 400px; /* Ajuste conforme necessário */
-}
-
 .flor-lotus {
-  display: block;
-  margin: 10px auto;
-  width: 150px; /* Ajuste o tamanho da flor */
+  width: 150px;
+  margin-bottom: 20px;
 }
 
+/* O Bloco da Direita (A imagem separada) */
 .lado-direito img {
-  max-width: 300px; /* Ajuste o tamanho da imagem do lado direito */
-  height: auto;
-  border-radius: 10px; /* Se quiser cantos arredondados */
-}
-
-
-
-.center-column img {
   max-width: 300px;
   height: auto;
-  object-fit: contain;
-  margin-bottom: 20px;
-}
-
-/* Caixa de texto com scroll */
-.scroll-box {
-  max-height: 200px;
-  overflow-y: auto;
-  font-size: 1.1em;
-  line-height: 1.5em;
-  margin-bottom: 20px;
-  color: white;
-}
-
-/* Imagem personagens */
-.center-column > img:last-child {
-  max-width: 100%;
-  height: auto;
   border-radius: 10px;
-}
-
-/* Coluna direita */
-.right-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  overflow-y: auto;
-}
-
-/* Imagens na coluna direita */
-.right-column img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-/* Balão de fala */
-.speech-bubble {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
-  padding: 15px;
-  font-style: italic;
-  text-align: center;
-  color: white;
-}
-
-/* Calendário */
-.calendar table {
-  width: 100%;
-  border-collapse: collapse;
-  color: white;
-}
-
-.calendar th, .calendar td {
-  border: 1px solid white;
-  padding: 5px;
-  text-align: center;
-}
-
-/* Scrollbars customizadas para as caixas com overflow */
-.scroll-box::-webkit-scrollbar,
-.left-column::-webkit-scrollbar,
-.center-column::-webkit-scrollbar,
-.right-column::-webkit-scrollbar {
-  width: 8px;
-}
-
-.scroll-box::-webkit-scrollbar-thumb,
-.left-column::-webkit-scrollbar-thumb,
-.center-column::-webkit-scrollbar-thumb,
-.right-column::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
 }
 
 /* --- Ajustes para Celulares --- */
 @media (max-width: 768px) {
-  /* 1. Faz as colunas ficarem uma embaixo da outra */
-  .container {
+  .container-principal {
     flex-direction: column;
-    height: auto; /* Permite que a página role */
-  }
-
-  .left-column, .center-column, .right-column {
-    flex: none;
-    width: 100%;
-    margin-left: 0 !important; /* Remove o deslocamento lateral que criamos para o desktop */
-    padding: 15px !important;
-  }
-
-  /* 2. Centraliza o texto na coluna central no celular */
-  .center-column {
-    text-align: center;
-    align-items: center;
-  }
-
-  /* 3. Ajusta o tamanho da imagem de fundo para não ficar estranha */
-  html, body {
-    background-position: center; /* Mantém o foco no meio */
-    background-size: cover;
+    height: auto;
+    padding-top: 50px;
   }
   
-  /* 4. Ajuste extra: evita que imagens gigantes estourem a tela do celular */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* 5. Esconde a imagem de personagens no celular para melhorar o layout */
-  .center-column > img:last-child {
-    display: none;
+  .centro, .lado-direito {
+    width: 100%;
   }
 }
