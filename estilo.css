@@ -80,7 +80,37 @@ html, body {
   margin-bottom: 20px;
 }
 
-/* Imagem central */
+
+.container-principal {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente o conjunto */
+  align-items: center; /* Alinha verticalmente ao centro */
+  gap: 40px; /* Espaço entre os dois blocos */
+  width: 100%;
+  height: 100vh; /* Altura total da tela */
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.centro {
+  text-align: center;
+  max-width: 400px; /* Ajuste conforme necessário */
+}
+
+.flor-lotus {
+  display: block;
+  margin: 10px auto;
+  width: 150px; /* Ajuste o tamanho da flor */
+}
+
+.lado-direito img {
+  max-width: 300px; /* Ajuste o tamanho da imagem do lado direito */
+  height: auto;
+  border-radius: 10px; /* Se quiser cantos arredondados */
+}
+
+
+
 .center-column img {
   max-width: 300px;
   height: auto;
