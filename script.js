@@ -28,10 +28,4 @@ formulario.addEventListener('submit', function(evento){
 
     });
 
-    function fazerFruta(fruta){
-        const resultado = "Suco de "+ fruta;
-        return resultado;
-    }
 
-    const meuCopo = fazerFruta('banana');
-    console.log(meuCopo);
