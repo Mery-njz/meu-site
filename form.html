@@ -1,69 +1,50 @@
-<form class="card" action="/enviar" method="post">
-  <h2>Formulario .ᐟ </h2>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Primeiro formulário: contato -->
+  <form class="card" action="/enviar" method="post">
+    <h2>Formulário .ᐟ </h2>
 
-  <label for="nome">Nome:</label>
-  <input type="text" id="nome" name="nome" required>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
 
-  <label for="mensagem">Mensagem:</label>
-  <textarea id="mensagem" name="mensagem" required></textarea>
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" required></textarea>
 
-<label for="categoria">Categoria da imagem:</label>
-<input type="text" id="categoria" name="categoria">
+    <label for="categoria">Categoria da imagem:</label>
+    <input type="text" id="categoria" name="categoria">
 
-  <div class='formulario'>
-  <h2 class='titulo'>Cadastrar</h2>
-  <form id="meuFormulario">
-    <label for="titulo">Nome do gato</label>
-    <input type="text" id="titulo" placeholder="Titulo" required><br>
-    <label for="imagem">Imagem do gato</label>
-    <input type="url" id="imagem" placeholder="URL da imagem" required><br>
-    <label for="paragrafo">Escreva sobre o gato</label>
-    <textarea id="paragrafo" placeholder="Diga"></textarea><br>
-    <button type="submit">Adicionar</button>
+    <button type="submit">Enviar</button>
   </form>
-</div>
 
-<div id="colecao"></div>
+  <!-- Segundo formulário: cadastro de gatos -->
+  <div class="formulario">
+    <h2 class="titulo">Cadastrar Gato</h2>
+    <form id="meuFormulario">
+      <label for="titulo">Nome do gato</label>
+      <input type="text" id="titulo" placeholder="Titulo" required><br>
 
-const formulario = document.getElementById('meuFormulario');
-const colecao = document.getElementById('colecao');
+      <label for="imagem">Imagem do gato</label>
+      <input type="url" id="imagem" placeholder="URL da imagem" required><br>
 
-formulario.addEventListener('submit', function(evento) {
-    evento.preventDefault();
+      <label for="paragrafo">Escreva sobre o gato</label>
+      <textarea id="paragrafo" placeholder="Diga"></textarea><br>
 
-    ***// 1. CAPTURAR: pegar os valores do formulário***
-  
-    const novo = {
-        titulo: document.getElementById('titulo').value,
-        imagem: document.getElementById('imagem').value,
-        texto: document.getElementById('paragrafo').value
-    };
+      <button type="submit">Adicionar</button>
+    </form>
+  </div>
 
-    // 2. MONTAR: criar o pedaço de HTML (card)
-    const card = `
-        <div class="card">
-            <img src="${novo.imagem}" alt="${novo.titulo}">
-            <h3>${novo.titulo}</h3>
-            <p>${novo.texto}</p>
-        </div>
-    `;
+  <div id="colecao"></div>
 
-    // 3. EXIBIR: adicionar o card na coleção
-    colecao.innerHTML += card;
-
-    // Limpar o formulário
-    formulario.reset();
-});
-
-  
-  <button type="submit">Enviar</button>
-</form>
- <style>
-     body {
-        background-color: rgb(255, 213, 228);
-     }
-</style>
-
+  <!-- Script separado -->
+  <script src="script.js"></script>
+</body>
+</html>
