@@ -25,10 +25,10 @@ html, body::before {
 }
 
 /* 🧩 Container Principal */
-.container-principal {
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 40px;
   width: 100%;
   min-height: 100vh;
@@ -36,69 +36,113 @@ html, body::before {
   flex-wrap: wrap;
 }
 
-/* 🌸 Bloco Central */
-.centro {
-  text-align: center;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* 📂 Coluna Esquerda */
+.left-column {
+  flex: 1;
+  max-width: 250px;
 }
 
-.centro h1 {
+.left-column .menu {
+  margin-bottom: 20px;
+}
+
+.left-column a {
+  color: #f8c8dc;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+.left-column a:hover {
+  text-decoration: underline;
+}
+
+.left-column img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* 🌸 Coluna Central */
+.center-column {
+  flex: 2;
+  text-align: center;
+}
+
+.center-column h1 {
   font-family: 'Comic Sans MS', cursive;
   font-size: 3em;
-  color: #f8c8dc; /* tom rosado suave */
+  color: #f8c8dc;
   margin-bottom: 20px;
   text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);
 }
 
-.flor-lotus {
-  width: 180px;
-  margin-bottom: 15px;
-  filter: drop-shadow(0 0 10px rgba(255, 192, 203, 0.6));
-  transition: transform 0.3s ease;
-}
-
-.flor-lotus:hover {
-  transform: scale(1.1);
-}
-
-/* 🎞️ Bloco da Direita */
-.lado-direito img {
-  max-width: 280px;
-  height: auto;
+.center-column img {
+  max-width: 300px;
   border-radius: 12px;
-  opacity: 0.9;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
   transition: transform 0.3s ease;
 }
 
-.lado-direito img:hover {
+.center-column img:hover {
   transform: scale(1.05);
+}
+
+.scroll-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* 🎞️ Coluna Direita */
+.right-column {
+  flex: 1;
+  max-width: 250px;
+  text-align: center;
+}
+
+.right-column img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.speech-bubble {
+  background: #f8c8dc;
+  color: #000;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+/* 📅 Calendário */
+.calendar table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+}
+
+.calendar th, .calendar td {
+  border: 1px solid #fff;
+  padding: 5px;
+  text-align: center;
 }
 
 /* 📱 Responsividade */
 @media (max-width: 768px) {
-  .container-principal {
+  .container {
     flex-direction: column;
-    padding-top: 50px;
+    align-items: center;
   }
 
-  .centro, .lado-direito {
-    width: 100%;
+  .left-column, .center-column, .right-column {
+    max-width: 100%;
+    flex: none;
   }
 
-  .centro h1 {
-    font-size: 2.4em;
-  }
-
-  .flor-lotus {
-    width: 130px;
-  }
-
-  .lado-direito img {
-    max-width: 220px;
+  .center-column h1 {
+    font-size: 2.2em;
   }
 }
-
