@@ -23,7 +23,21 @@ formulario.addEventListener('submit', function(evento){
         </div>
     `;
 
+      
+    
     document.getElementById('colecao').innerHTML += novoCard; 
     formulario.reset(); 
 });
-    renderiazarCards(novo);
+
+function renderiazarCards(flores){
+    const novoCard =
+ <div class="card"> 
+            <div class="letras">
+                <h3>${flores.titulo}</h3>
+                <p>${flores.texto}</p>
+            </div>
+            <div class="img">
+                <img src="${novo.imagem}" alt="${novo.descricaoIm}" style="max-width:100%; border-radius:10px;"/>
+                <p class="descricao">${novo.descricaoIm}</p>
+            </div>
+        </div>
