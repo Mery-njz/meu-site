@@ -1,4 +1,4 @@
-const formulario = document.getElementById('form');
+const formulario = document.getElementById('meuFormulario'); // corrigido
 
 formulario.addEventListener('submit', function(evento){
     evento.preventDefault();
@@ -6,26 +6,22 @@ formulario.addEventListener('submit', function(evento){
     const novo = {
         titulo: document.getElementById('titulo').value,
         imagem: document.getElementById('imagem').value,
-        //descricaoIm: document.getElementById('descricao').value,
+        descricaoIm: document.getElementById('descricao').value, // agora pega a descrição
         texto: document.getElementById('paragrafo').value
     };
 
     const novoCard = `
-        <div class = "card"> 
-            <div class = "letras>
-                <h3 id="titulo">${novo.titulo}</h3>
+        <div class="card"> 
+            <div class="letras">
+                <h3>${novo.titulo}</h3>
                 <p>${novo.texto}</p>
             </div>
-            <div class = "img">
-                <img src="${novo.imagem}" alt="${novo.descricaoIm}"/>
+            <div class="img">
+                <img src="${novo.imagem}" alt="${novo.descricaoIm}" style="max-width:100%; border-radius:10px;"/>
             </div>
         </div>
-        `;//Injetar no nosso código html
+    `;
 
-
-    colecao.innerHTML += novoCard;
-    formulario.reset(); //limpa o formulario
-
-    });
-
-
+    document.getElementById('colecao').innerHTML += novoCard; // corrigido
+    formulario.reset(); // limpa o formulário
+});
