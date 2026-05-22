@@ -26,3 +26,4 @@ formulario.addEventListener('submit', function(evento){
     document.getElementById('colecao').innerHTML += novoCard; 
     formulario.reset(); 
 });
+    renderiazarCards(novo);
