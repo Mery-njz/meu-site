@@ -4,12 +4,71 @@
     <meta charset="UTF-8">
     <title>Formulário .ᐟ</title>
     <style>
-        .formulario{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
+        body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+    margin: 0;
+    padding: 0;
+}
+
+.formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #ffffffcc;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 350px;
+    margin: 50px auto;
+}
+
+.titulo {
+    font-size: 24px;
+    color: #8e24aa;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px #f8bbd0;
+}
+
+label {
+    font-weight: bold;
+    color: #6a1b9a;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ce93d8;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #ab47bc;
+    box-shadow: 0 0 8px #ba68c8;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ab47bc;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #8e24aa;
+    transform: scale(1.05);
+}
+
     </style>
     <script src= 'script.js' defer></script>
 </head>
