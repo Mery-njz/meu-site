@@ -1,4 +1,4 @@
-const formulario = document.getElementById('meuFormulario'); 
+const formulario = document.getElementById('meuFormulario');
 
 formulario.addEventListener('submit', function(evento){
     evento.preventDefault();
@@ -18,6 +18,7 @@ formulario.addEventListener('submit', function(evento){
             </div>
             <div class="img">
                 <img src="${novo.imagem}" alt="${novo.descricaoIm}" style="max-width:100%; border-radius:10px;"/>
+                <p class="descricao">${novo.descricaoIm}</p>
             </div>
         </div>
     `;
