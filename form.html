@@ -5,104 +5,148 @@
     <title>Formulário .ᐟ</title>
     <style>
         body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #fce4ec, #f3e5f5);
-    margin: 0;
-    padding: 0;
-}
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #fce4ec, #e3f2fd); /* rosa claro + azul claro */
+            margin: 0;
+            padding: 0;
+        }
 
-.formulario {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: #ffffffcc;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    width: 350px;
-    margin: 50px auto;
-}
+        .formulario {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: #ffffffcc;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            width: 350px;
+            margin: 50px auto;
+        }
 
-.titulo {
-    font-size: 24px;
-    color: rgb(255, 212, 201);
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px #f8bbd0;
-}
+        .titulo {
+            font-size: 24px;
+            color: #5c6bc0; /* azul suave */
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px #f8bbd0;
+        }
 
-label {
-    font-weight: bold;
-    color: rgb(255, 212, 201);
-    margin-top: 10px;
-}
+        label {
+            font-weight: bold;
+            color: #ad1457; /* rosa mais forte */
+            margin-top: 10px;
+        }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 2px solid #ce93d8;
-    border-radius: 10px;
-    outline: none;
-    transition: 0.3s;
-}
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid #bbdefb; /* azul clarinho */
+            border-radius: 10px;
+            outline: none;
+            transition: 0.3s;
+            background: #fff;
+        }
 
-input:focus, textarea:focus {
-    border-color: #ab47bc;
-    box-shadow: 0 0 8px #ba68c8;
-}
+        input:focus, textarea:focus {
+            border-color: #64b5f6;
+            box-shadow: 0 0 8px #90caf9;
+        }
 
-button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #ab47bc;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
-}
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #f48fb1; /* rosa suave */
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
 
-button:hover {
-    background: #8e24aa;
-    transform: scale(1.05);
-}
+        button:hover {
+            background: #ec407a;
+            transform: scale(1.05);
+        }
+
+        /* Galeria */
+        #colecao {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #bbdefb;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px;
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 250px;
+        }
+
+        .card h3 {
+            color: #5c6bc0;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .card p {
+            color: #6d4c41;
+            text-align: center;
+        }
+
         .card .img {
-    display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    margin-top: 10px;
-    width: 100%;
-}
+            display: flex;
+            flex-direction: column; /* empilha imagem e descrição */
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            width: 100%;
+        }
 
-.card img {
-    max-width: 80%; /* controla o tamanho */
-    border-radius: 10px;
-}
+        .card img {
+            max-width: 80%;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            margin-bottom: 8px;
+        }
 
+        .card .descricao {
+            font-size: 14px;
+            color: #ad1457;
+            text-align: center;
+        }
     </style>
-    <script src= 'script.js' defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class = 'formulario'>
-        <h2 class = 'titulo'>Cadastrar</h2>
+    <div class="formulario">
+        <h2 class="titulo">Cadastrar</h2>
         <form id="meuFormulario">
-        <label for="titulo">Nome da flor ❀ </label>
-        <input type="text" id="titulo" placeholder="Titulo" required><br>
-        <label for="imagem">Imagem da flor ❀ </label>
-        <input type="url" id="imagem" placeholder="URL da imagem" required><br>
+            <label for="titulo">Nome da flor ❀ </label>
+            <input type="text" id="titulo" placeholder="Titulo" required><br>
+            
+            <label for="imagem">Imagem da flor ❀ </label>
+            <input type="url" id="imagem" placeholder="URL da imagem" required><br>
 
-        <label for="descricao">Descrição da imagem ❀ </label>
-        <input type="text" id="descricao" placeholder="Descreva a imagem adicionada" required><br>
+            <label for="descricao">Descrição da imagem ❀ </label>
+            <input type="text" id="descricao" placeholder="Descreva a imagem adicionada" required><br>
 
-        <label for="paragrafo">Escreva sobre a flor ❀ </label>
-        <textarea id="paragrafo" placeholder="Diga"></textarea><br>
-        <button type="submit">Adicionar ᯽ </button>
-    </form>
+            <label for="paragrafo">Escreva sobre a flor ❀ </label>
+            <textarea id="paragrafo" placeholder="Diga"></textarea><br>
+            
+            <button type="submit">Adicionar ᯽ </button>
+        </form>
     </div>
 
-    
     <div id="colecao"></div>
-
 </body>
 </html>
