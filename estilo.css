@@ -1,11 +1,11 @@
-/* 🔄 Reset básico */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 🌌 Corpo e fundo */
+
 html, body {
   height: 100%;
   width: 100%;
@@ -15,7 +15,7 @@ html, body {
   position: relative;
 }
 
-/* Camada escura para suavizar o fundo */
+
 html, body::before {
   content: "";
   position: fixed;
@@ -24,7 +24,7 @@ html, body::before {
   z-index: -1;
 }
 
-/* 🧩 Container Principal */
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -36,7 +36,7 @@ html, body::before {
   flex-wrap: wrap;
 }
 
-/* 📂 Coluna Esquerda */
+/* Coluna Esquerda */
 .left-column {
   flex: 1;
   max-width: 250px;
@@ -63,7 +63,7 @@ html, body::before {
   margin-bottom: 15px;
 }
 
-/* 🌸 Coluna Central */
+/*  Coluna Central */
 .center-column {
   flex: 2;
   text-align: center;
@@ -96,7 +96,7 @@ html, body::before {
   overflow-y: auto;
 }
 
-/* 🎞️ Coluna Direita */
+/*  Coluna Direita */
 .right-column {
   flex: 1;
   max-width: 250px;
@@ -118,7 +118,7 @@ html, body::before {
   text-align: center;
 }
 
-/* Ajuste para que esquerda e direita fiquem simétricas */
+/* Ajuste para que esquerda e direita fique simetricas */
 .left-column, .right-column {
   display: flex;
   flex-direction: column;
@@ -126,7 +126,7 @@ html, body::before {
 }
 
 
-/* 📅 Calendário */
+
 .calendar table {
   width: 100%;
   border-collapse: collapse;
@@ -139,7 +139,7 @@ html, body::before {
   text-align: center;
 }
 
-/* 📱 Responsividade */
+/* responsividade */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
