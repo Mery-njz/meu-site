@@ -1,4 +1,32 @@
+// 1. Inicializa a lista buscando dados existentes ou cria uma nova lista vazia
+const galeria = JSON.parse(localStorage.getItem('galeria')) || [];
+
 const formulario = document.getElementById('meuFormulario');
+
+// 3. Função para renderizar todos os cards na tela
+function renderizarCards() {
+    const container = document.getElementById('colecao');
+    container.innerHTML = ''; // Limpa o container antes de renderizar para não duplicar
+
+    galeria.forEach(flores => {
+        const novoCard = `
+            <div class="card"> 
+                <div class="letras">
+                    <h3>${flores.titulo}</h3>
+                    <p>${flores.texto}</p>
+                </div>
+                <div class="img">
+                    <img src="${flores.imagem}" alt="${flores.descricaoIm}" style="max-width:100%; border-radius:10px;"/>
+                    <p class="descricao">${flores.descricaoIm}</p>
+                </div>
+            </div>
+        `;
+        container.innerHTML += novoCard;
+    });
+}
+
+// 4. Renderiza os cards guardados logo que a página carrega
+renderizarCards();
 
 formulario.addEventListener('submit', function(evento){
     evento.preventDefault();
@@ -10,34 +38,12 @@ formulario.addEventListener('submit', function(evento){
         texto: document.getElementById('paragrafo').value
     };
 
-    const novoCard = `
-        <div class="card"> 
-            <div class="letras">
-                <h3>${novo.titulo}</h3>
-                <p>${novo.texto}</p>
-            </div>
-            <div class="img">
-                <img src="${novo.imagem}" alt="${novo.descricaoIm}" style="max-width:100%; border-radius:10px;"/>
-                <p class="descricao">${novo.descricaoIm}</p>
-            </div>
-        </div>
-    `;
+    // 2. Adiciona o objeto no array e atualiza o LocalStorage
+    galeria.push(novo);
+    localStorage.setItem('galeria', JSON.stringify(galeria));
 
-      
+    // Atualiza a tela com o novo card
+    renderizarCards();
     
-    document.getElementById('colecao').innerHTML += novoCard; 
     formulario.reset(); 
 });
-
-function renderiazarCards(flores){
-    const novoCard =
- <div class="card"> 
-            <div class="letras">
-                <h3>${flores.titulo}</h3>
-                <p>${flores.texto}</p>
-            </div>
-            <div class="img">
-                <img src="${novo.imagem}" alt="${novo.descricaoIm}" style="max-width:100%; border-radius:10px;"/>
-                <p class="descricao">${novo.descricaoIm}</p>
-            </div>
-        </div>
