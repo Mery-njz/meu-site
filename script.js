@@ -16,7 +16,7 @@ function renderizarCards() {
                     <p>${flores.texto}</p>
                 </div>
                 <div class="img">
-                    <img src="${flores.imagem}" alt="${flores.descricaoIm}" style="max-width:100%; border-radius:10px;"/>
+                    <img src="${flores.imagem}" alt="${flores.descricaoIm}" />
                     <p class="descricao">${flores.descricaoIm}</p>
                 </div>
             </div>
