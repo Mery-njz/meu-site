@@ -18,10 +18,17 @@
             flex-direction: column;
             background: #ffffffcc;
             padding: 30px;
-            border-radius: 1px;
+            border-radius: 15px; /* CORRIGIDO: De 1px para 15px para combinar com o visual arredondado */
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             width: 350px;
             margin: 50px auto;
+        }
+
+        /* Ajuste para alinhar as labels à esquerda e esticar os inputs corretamente */
+        #meuFormulario {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
         }
 
         .titulo {
@@ -29,15 +36,17 @@
             color: #5c6bc0; /* azul suave */
             margin-bottom: 20px;
             text-shadow: 1px 1px 2px #f8bbd0;
+            text-align: center;
         }
 
         label {
             font-weight: bold;
             color: #ad1457; /* rosa mais forte */
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         input, textarea {
+            box-sizing: border-box; /* CORRIGIDO: Impede que o padding faça o input passar do limite do card */
             width: 100%;
             padding: 10px;
             margin-top: 5px;
@@ -46,6 +55,7 @@
             outline: none;
             transition: 0.3s;
             background: #fff;
+            font-family: inherit;
         }
 
         input:focus, textarea:focus {
@@ -53,9 +63,14 @@
             box-shadow: 0 0 8px #90caf9;
         }
 
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
         button {
-            margin-top: 15px;
-            padding: 10px 20px;
+            margin-top: 20px;
+            padding: 12px 20px;
             background: #f48fb1; /* rosa suave */
             color: white;
             border: none;
@@ -63,11 +78,12 @@
             cursor: pointer;
             font-size: 16px;
             transition: 0.3s;
+            width: 100%; /* Otimizado para ocupar a largura do formulário */
         }
 
         button:hover {
             background: #ec407a;
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
 
         /* Galeria */
@@ -82,7 +98,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             border: 2px solid #bbdefb;
             border-radius: 15px;
             padding: 20px;
@@ -94,13 +110,14 @@
 
         .card h3 {
             color: #5c6bc0;
-            margin-bottom: 10px;
+            margin: 0 0 10px 0;
             text-align: center;
         }
 
         .card p {
             color: #6d4c41;
             text-align: center;
+            margin: 0 0 10px 0;
         }
 
         .card .img {
@@ -113,7 +130,7 @@
         }
 
         .card img {
-            max-width: 80%;
+            max-width: 100%; /* CORRIGIDO: Ajustado para preencher a largura interna do card */
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
             margin-bottom: 8px;
@@ -123,6 +140,7 @@
             font-size: 14px;
             color: #ad1457;
             text-align: center;
+            margin: 0;
         }
     </style>
     <script src="script.js" defer></script>
@@ -132,16 +150,16 @@
         <h2 class="titulo">Cadastrar</h2>
         <form id="meuFormulario">
             <label for="titulo">Nome da flor ❀ </label>
-            <input type="text" id="titulo" placeholder="Titulo" required><br>
+            <input type="text" id="titulo" placeholder="Ex: Rosa Vermelha" required>
             
             <label for="imagem">Imagem da flor ❀ </label>
-            <input type="url" id="imagem" placeholder="URL da imagem" required><br>
+            <input type="url" id="imagem" placeholder="https://exemplo.com" required>
 
             <label for="descricao">Descrição da imagem ❀ </label>
-            <input type="text" id="descricao" placeholder="Descreva a imagem adicionada" required><br>
+            <input type="text" id="descricao" placeholder="Descreva o que se vê na imagem" required>
 
             <label for="paragrafo">Escreva sobre a flor ❀ </label>
-            <textarea id="paragrafo" placeholder="Diga"></textarea><br>
+            <textarea id="paragrafo" placeholder="Conte mais detalhes sobre esta flor..." required></textarea>
             
             <button type="submit">Adicionar ᯽ </button>
         </form>
