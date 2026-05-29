@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #fce4ec, #e3f2fd); /* rosa claro + azul claro */
+            background: linear-gradient(135deg, #fce4ec, #e3f2fd);
             margin: 0;
             padding: 0;
         }
@@ -18,39 +18,45 @@
             flex-direction: column;
             background: #ffffffcc;
             padding: 30px;
-            border-radius: 15px; /* CORRIGIDO: De 1px para 15px para combinar com o visual arredondado */
+            border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             width: 350px;
             margin: 50px auto;
         }
 
-        /* Ajuste para alinhar as labels à esquerda e esticar os inputs corretamente */
         #meuFormulario {
             display: flex;
             flex-direction: column;
             width: 100%;
         }
 
-        .titulo {
+        .formulario h3 {
             font-size: 24px;
-            color: #5c6bc0; /* azul suave */
-            margin-bottom: 20px;
+            color: #5c6bc0;
+            margin: 0 0 5px 0;
             text-shadow: 1px 1px 2px #f8bbd0;
             text-align: center;
         }
 
+        .formulario p {
+            color: #6d4c41;
+            margin: 0 0 20px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
         label {
             font-weight: bold;
-            color: #ad1457; /* rosa mais forte */
+            color: #ad1457;
             margin-top: 15px;
         }
 
         input, textarea {
-            box-sizing: border-box; /* CORRIGIDO: Impede que o padding faça o input passar do limite do card */
+            box-sizing: border-box;
             width: 100%;
             padding: 10px;
             margin-top: 5px;
-            border: 2px solid #bbdefb; /* azul clarinho */
+            border: 2px solid #bbdefb;
             border-radius: 10px;
             outline: none;
             transition: 0.3s;
@@ -71,14 +77,14 @@
         button {
             margin-top: 20px;
             padding: 12px 20px;
-            background: #f48fb1; /* rosa suave */
+            background: #f48fb1;
             color: white;
             border: none;
             border-radius: 20px;
             cursor: pointer;
             font-size: 16px;
             transition: 0.3s;
-            width: 100%; /* Otimizado para ocupar a largura do formulário */
+            width: 100%;
         }
 
         button:hover {
@@ -122,7 +128,7 @@
 
         .card .img {
             display: flex;
-            flex-direction: column; /* empilha imagem e descrição */
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             margin-top: 10px;
@@ -130,7 +136,7 @@
         }
 
         .card img {
-            max-width: 100%; /* CORRIGIDO: Ajustado para preencher a largura interna do card */
+            max-width: 100%;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
             margin-bottom: 8px;
@@ -145,29 +151,30 @@
     </style>
     <script src="script.js" defer></script>
 </head>
-
 <body>
     <div class="formulario">
-        <h3> cadastro ♰ </h3>
-        <p> adicione as informações </p>
+        <h3>cadastro ♰</h3>
+        <p>adicione as informações</p>
        
-        <form id="meuformulario">
-            <label for="titulo">nome</label>
-            <input type="text" id="titulo" placeholder="escreva.." required><br>
+        <!-- CORRIGIDO: ID alterado para CamelCase igual ao JS -->
+        <form id="meuFormulario">
+            <label for="titulo">Nome</label>
+            <input type="text" id="titulo" placeholder="Escreva o nome..." required>
            
             <label for="imagem">URL da foto</label>
-            <input type="url" id="imagem" placeholder="escreva..." required><br>
+            <input type="url" id="imagem" placeholder="https://linkdaimagem.com" required>
            
-            <label for="paragrafo">descrição da imagem</label>
-            <textarea id="paragrafo" placeholder="escreva..." required></textarea>
+            <!-- ADICIONADO: Campo descrição da imagem que faltava para o JS funcionar -->
+            <label for="descricao">Descrição da imagem (Acessibilidade)</label>
+            <input type="text" id="descricao" placeholder="O que tem na foto?" required>
+
+            <label for="paragrafo">Escreva sobre ela</label>
+            <textarea id="paragrafo" placeholder="Conte mais detalhes..." required></textarea>
            
-            <button type="submit"> adicionar ⟡˖ ࣪</button>
+            <button type="submit">adicionar ⟡˖ ࣪</button>
         </form>
     </div>
    
     <div id="colecao"></div>
-   
-    <script src="script.js"></script>
 </body>
 </html>
-    
