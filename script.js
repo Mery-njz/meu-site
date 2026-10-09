@@ -47,3 +47,21 @@ formulario.addEventListener('submit', function(evento){
     
     formulario.reset(); 
 });
+
+from.addEventListener('sumbit', function(e) {
+    e.preventDefalut();
+
+    const novaObra = new ObraDeArte(t, desc, img, alt);
+
+    fetch('/api/lista', {
+        method: 'POST',
+        headers {
+            'Content-Type': 'application/json'
+        },
+        body: JOSON.stringify(novaObra)
+    })
+    .then(() => {
+        window.location.href = 'index.html';
+    });
+});
+
